@@ -1,15 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import { CHURCH_INFO, MEDIA_LINKS } from "@/data/churchData";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function Footer() {
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
+
   return (
-    <footer className="bg-[#070d1a] text-[#faf9f6] border-t border-white/10" id="contact">
+    <footer ref={ref} className="bg-[#070d1a] text-[#faf9f6] border-t border-white/10 overflow-hidden" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-white/10">
-          {/* Col 1: Brand & Theme */}
-          <div className="md:col-span-7 flex flex-col space-y-4">
+          {/* Col 1: Brand & Theme (Slides up) */}
+          <div
+            style={{ transitionDelay: isVisible ? "100ms" : "0ms" }}
+            className={`md:col-span-7 flex flex-col space-y-4 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0f2042] border border-[#f59e0b]/40 flex items-center justify-center p-1.5">
+              <div className="w-10 h-10 rounded-xl bg-[#0f2042] border border-[#f59e0b]/40 flex items-center justify-center p-1.5 shadow-md">
                 <Image
                   src="/images/gpc_logo.png"
                   alt="Logo"
@@ -35,8 +45,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Campus HQ & Inquiries */}
-          <div className="md:col-span-5 flex flex-col space-y-3">
+          {/* Col 2: Campus HQ & Inquiries (Slides up) */}
+          <div
+            style={{ transitionDelay: isVisible ? "250ms" : "0ms" }}
+            className={`md:col-span-5 flex flex-col space-y-3 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
             <h4 className="font-headline text-sm font-bold text-[#faf9f6] uppercase tracking-wider">
               Ikeja Headquarters
             </h4>
@@ -61,7 +76,7 @@ export default function Footer() {
                 href={MEDIA_LINKS.facebookPage}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-[#0f2042] border border-white/10 flex items-center justify-center text-[#d3e4fe] hover:text-[#1877F2] hover:border-[#1877F2]/50 hover:bg-[#1877F2]/10 transition-all shadow"
+                className="w-9 h-9 rounded-xl bg-[#0f2042] border border-white/10 flex items-center justify-center text-[#d3e4fe] hover:text-[#1877F2] hover:border-[#1877F2]/50 hover:bg-[#1877F2]/10 transition-all shadow hover:scale-110 active:scale-95"
                 aria-label="Facebook"
                 title="Follow on Facebook"
               >
@@ -71,7 +86,7 @@ export default function Footer() {
                 href={MEDIA_LINKS.instagramPage}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-[#0f2042] border border-white/10 flex items-center justify-center text-[#d3e4fe] hover:text-[#E4405F] hover:border-[#E4405F]/50 hover:bg-[#E4405F]/10 transition-all shadow"
+                className="w-9 h-9 rounded-xl bg-[#0f2042] border border-white/10 flex items-center justify-center text-[#d3e4fe] hover:text-[#E4405F] hover:border-[#E4405F]/50 hover:bg-[#E4405F]/10 transition-all shadow hover:scale-110 active:scale-95"
                 aria-label="Instagram"
                 title="Follow on Instagram"
               >
@@ -81,7 +96,7 @@ export default function Footer() {
                 href={MEDIA_LINKS.tiktokPage}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-[#0f2042] border border-white/10 flex items-center justify-center text-[#d3e4fe] hover:text-white hover:border-[#25F4EE]/50 hover:bg-[#25F4EE]/10 transition-all shadow"
+                className="w-9 h-9 rounded-xl bg-[#0f2042] border border-white/10 flex items-center justify-center text-[#d3e4fe] hover:text-white hover:border-[#25F4EE]/50 hover:bg-[#25F4EE]/10 transition-all shadow hover:scale-110 active:scale-95"
                 aria-label="TikTok"
                 title="Follow on TikTok"
               >
@@ -92,15 +107,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Tier */}
-        <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#d3e4fe] text-center sm:text-left">
+        <div
+          style={{ transitionDelay: isVisible ? "400ms" : "0ms" }}
+          className={`pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-center text-xs text-[#d3e4fe] text-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
           <p>© {CHURCH_INFO.themeYear} {CHURCH_INFO.fullName} • {CHURCH_INFO.arkName}. All Rights Reserved.</p>
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-            <a className="hover:text-[#fbbf24] transition-colors" href="#visit-planner">Plan a Visit</a>
-            <a className="hover:text-[#fbbf24] transition-colors" href="#visit-planner">Prayer Line</a>
-            <a className="hover:text-[#fbbf24] transition-colors" href={CHURCH_INFO.website} target="_blank" rel="noopener noreferrer">
-              Global Portal
-            </a>
-          </div>
         </div>
       </div>
     </footer>
