@@ -8,7 +8,7 @@ export default function CountdownTimer() {
     hours: "00",
     minutes: "00",
     seconds: "00",
-    serviceName: "Sunday Glory Celebration (8:00 AM & 9:15 AM)"
+    serviceName: "Sunday Service (8:00 AM & 9:15 AM)"
   });
 
   useEffect(() => {
@@ -16,12 +16,12 @@ export default function CountdownTimer() {
       const now = new Date();
       const day = now.getDay(); // 0 = Sunday, 3 = Wednesday
       const target = new Date(now);
-      let serviceTitle = "Sunday Glory Celebration (8:00 AM & 9:15 AM)";
+      let serviceTitle = "Sunday Service (8:00 AM & 9:15 AM)";
 
       // If Sunday before 8:00 AM
       if (day === 0 && now.getHours() < 8) {
         target.setHours(8, 0, 0, 0);
-        return { target, serviceTitle: "Sunday Glory Celebration (1st Service: 8:00 AM)" };
+        return { target, serviceTitle: "Sunday Service (1st Service: 8:00 AM)" };
       }
       // If Wednesday before 7:00 PM
       if (day === 3 && now.getHours() < 19) {
@@ -42,7 +42,7 @@ export default function CountdownTimer() {
       } else {
         target.setDate(now.getDate() + daysToSun);
         target.setHours(8, 0, 0, 0);
-        serviceTitle = "Sunday Glory Celebration (8:00 AM & 9:15 AM)";
+        serviceTitle = "Sunday Service (8:00 AM & 9:15 AM)";
       }
 
       return { target, serviceTitle };

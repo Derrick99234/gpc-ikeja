@@ -12,10 +12,12 @@ import OnlineGiving from "@/components/OnlineGiving";
 import ContactAndMap from "@/components/ContactAndMap";
 import Footer from "@/components/Footer";
 import VideoModal from "@/components/VideoModal";
+import CalendarModal from "@/components/CalendarModal";
 import FloatingSocialWidget from "@/components/FloatingSocialWidget";
 
 export default function Home() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
 
   return (
     <main className="min-h-screen flex flex-col font-body">
@@ -23,8 +25,10 @@ export default function Home() {
       <Navbar onOpenVideo={() => setIsVideoModalOpen(true)} />
 
       {/* 2. Hero Section with Live Countdown */}
-      <Hero onOpenVideo={() => setIsVideoModalOpen(true)} />
-
+      <Hero
+        onOpenVideo={() => setIsVideoModalOpen(true)}
+        onOpenCalendar={() => setIsCalendarModalOpen(true)}
+      />
 
       {/* 4. Weekly Service Schedules */}
       <ServiceSchedule />
@@ -56,7 +60,13 @@ export default function Home() {
         onClose={() => setIsVideoModalOpen(false)}
       />
 
-      {/* 12. Floating Chat & Social Channels Quick Menu */}
+      {/* 12. Add to Calendar Modal */}
+      <CalendarModal
+        isOpen={isCalendarModalOpen}
+        onClose={() => setIsCalendarModalOpen(false)}
+      />
+
+      {/* 13. Floating Chat & Social Channels Quick Menu */}
       <FloatingSocialWidget />
     </main>
   );
