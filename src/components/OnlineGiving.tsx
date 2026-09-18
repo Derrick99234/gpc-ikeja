@@ -39,14 +39,6 @@ export default function OnlineGiving() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-[#f59e0b]/15 border border-[#f59e0b]/30 mb-3 sm:mb-4">
-            <span className="material-symbols-outlined text-[#fbbf24] text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>
-              payments
-            </span>
-            <span className="font-headline text-[10px] sm:text-xs text-[#fbbf24] uppercase tracking-wider sm:tracking-widest font-bold">
-              Kingdom Stewardship &amp; Covenant Partnership
-            </span>
-          </div>
           <h2 className="font-headline text-2xl sm:text-4xl font-extrabold text-[#faf9f6] tracking-tight">
             Honor the Lord with Your Substance
           </h2>
@@ -57,68 +49,61 @@ export default function OnlineGiving() {
         </div>
 
         {/* Bank Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          {BANK_ACCOUNTS.map((acc) => (
-            <div
-              key={acc.id}
-              className="bg-[#0f2042] rounded-2xl p-6 border border-[#f59e0b]/30 flex flex-col justify-between shadow-lg hover:border-[#f59e0b] hover:shadow-2xl transition-all"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-[#fbbf24] text-xs uppercase font-bold tracking-wider">{acc.bankName}</span>
-                  <span className="material-symbols-outlined text-[#fbbf24] text-xl">{acc.icon}</span>
-                </div>
-                <h4 className="font-headline text-lg font-bold text-[#faf9f6] mb-1">{acc.category}</h4>
-                <p className="text-xs text-[#d3e4fe] mb-6">{acc.description}</p>
-                <div className="bg-[#070d1a] p-3 rounded-xl border border-white/10 mb-4">
-                  <span className="text-[#d3e4fe] text-[11px] block">Account Number</span>
-                  <span className="font-headline text-xl font-black text-[#faf9f6] font-mono tracking-wider">
-                    {acc.accountNumber}
-                  </span>
-                </div>
-              </div>
-              <button
-                onClick={() => handleCopy(acc.accountNumber, acc.category)}
-                className="w-full py-2.5 px-4 rounded-xl bg-[#f59e0b]/20 hover:bg-[#f59e0b]/30 text-[#fbbf24] border border-[#f59e0b]/40 font-headline text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all active:scale-95"
-              >
-                <span className="material-symbols-outlined text-sm">content_copy</span>
-                <span>Copy Account Number</span>
-              </button>
-            </div>
-          ))}
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {BANK_ACCOUNTS.map((acc, idx) => {
+            const accents = [
+              { num: "1", tagBg: "bg-red-600", borderHover: "hover:border-red-500", glow: "from-red-600/10" },
+              { num: "2", tagBg: "bg-blue-600", borderHover: "hover:border-blue-500", glow: "from-blue-600/10" },
+              { num: "3", tagBg: "bg-emerald-600", borderHover: "hover:border-emerald-500", glow: "from-emerald-600/10" }
+            ][idx];
 
-        {/* Diaspora Giving Banner */}
-        <div className="mt-12 p-8 rounded-2xl bg-[#0f2042]/70 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-md">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-[#f59e0b]/20 flex items-center justify-center text-[#fbbf24] flex-shrink-0">
-              <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
-                verified_user
-              </span>
-            </div>
-            <div>
-              <h4 className="font-headline text-base font-bold text-[#faf9f6]">
-                Diaspora & International Remittances
-              </h4>
-              <p className="text-xs text-[#d3e4fe] mt-0.5">
-                For foreign currency wires (USD, GBP, EUR) or questions regarding covenant seeds:
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-wrap items-center gap-4 text-xs font-bold">
-            <a
-              href={`mailto:${CHURCH_INFO.givingEmail}`}
-              className="px-5 py-2.5 rounded-xl bg-[#070d1a] border border-[#f59e0b]/40 text-[#fbbf24] hover:bg-[#f59e0b] hover:text-[#070d1a] transition-all"
-            >
-              {CHURCH_INFO.givingEmail}
-            </a>
-            <a
-              href={`tel:${CHURCH_INFO.hotlines[0]}`}
-              className="px-5 py-2.5 rounded-xl bg-[#070d1a] border border-white/10 text-white hover:text-[#fbbf24] transition-all"
-            >
-              {CHURCH_INFO.hotlines[0]}
-            </a>
-          </div>
+            return (
+              <div
+                key={acc.id}
+                className={`bg-[#0f2042] rounded-2xl p-6 border border-[#f59e0b]/30 flex flex-col justify-between shadow-xl ${accents?.borderHover} hover:-translate-y-1 transition-all relative overflow-hidden`}
+              >
+                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl ${accents?.glow} to-transparent rounded-full blur-xl pointer-events-none`}></div>
+
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <span className={`w-7 h-7 rounded-lg ${accents?.tagBg} text-white font-headline font-black text-sm flex items-center justify-center shadow`}>
+                        {accents?.num}
+                      </span>
+                      <span className="text-[#fbbf24] text-xs uppercase font-bold tracking-wider">
+                        {acc.bankName}
+                      </span>
+                    </div>
+                    <span className="material-symbols-outlined text-[#fbbf24] text-xl">{acc.icon}</span>
+                  </div>
+
+                  <h4 className="font-headline text-xl font-extrabold text-[#faf9f6] mb-1">
+                    {acc.category}
+                  </h4>
+                  <p className="text-xs text-[#d3e4fe] mb-4">
+                    Account Name: <strong className="text-white">{acc.accountName}</strong>
+                  </p>
+
+                  <div className="bg-[#070d1a] p-4 rounded-xl border border-white/10 mb-5">
+                    <span className="text-[#d3e4fe] text-[11px] uppercase tracking-wider block mb-1">
+                      Account Number ({acc.bankName})
+                    </span>
+                    <span className="font-headline text-2xl font-black text-[#faf9f6] font-mono tracking-widest block">
+                      {acc.accountNumber}
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => handleCopy(acc.accountNumber, acc.category)}
+                  className="w-full py-3 px-4 rounded-xl bg-[#f59e0b]/20 hover:bg-[#f59e0b]/30 text-[#fbbf24] border border-[#f59e0b]/40 font-headline text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all active:scale-95 shadow"
+                >
+                  <span className="material-symbols-outlined text-sm">content_copy</span>
+                  <span>Copy Account Number</span>
+                </button>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

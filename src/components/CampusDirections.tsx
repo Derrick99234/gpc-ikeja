@@ -11,7 +11,7 @@ export default function CampusDirections() {
               <span>Visit The Sanctuary</span>
             </div>
             <h3 className="font-headline text-xl sm:text-3xl font-bold text-[#000922]">
-              Finding {CHURCH_INFO.cathedralName}
+              Finding {CHURCH_INFO.arkName}
             </h3>
             <p className="text-xs sm:text-sm text-[#45464e] mt-2 leading-relaxed">
               Situated on Kudirat Abiola Way in Alausa, Ikeja — {CHURCH_INFO.nearLandmark}. Easily accessible from Ikeja City Mall, Oregun, and the Lagos-Ibadan Expressway.
