@@ -67,14 +67,14 @@ export default function Hero({ onOpenVideo }: HeroProps) {
             </div>
           </div>
 
-          {/* Right Column: Cathedral Visual */}
+          {/* Right Column: Visual */}
           <div className="lg:col-span-5 relative">
             <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-tr from-[#f59e0b]/40 via-[#0f2042] to-[#fbbf24]/30 blur-sm"></div>
             <div className="relative bg-[#0f2042] rounded-2xl overflow-hidden border border-[#f59e0b]/30 shadow-2xl">
               <div className="relative h-72 sm:h-96 w-full overflow-hidden group">
                 <Image
-                  src="/images/ark_of_light_cathedral.webp"
-                  alt="The Ark of Light for All Nations Ikeja Cathedral"
+                  src="/images/ark_of_light.webp"
+                  alt="The Ark of Light for All Nations Ikeja"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                   priority
@@ -88,15 +88,9 @@ export default function Hero({ onOpenVideo }: HeroProps) {
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#070d1a]/90 border border-white/10 backdrop-blur-md">
-                  <p className="text-[#fbbf24] text-xs uppercase font-bold tracking-wider mb-0.5">
-                    10,000-Seat Global Cathedral
-                  </p>
                   <h4 className="text-[#faf9f6] font-headline text-base font-bold">
-                    {CHURCH_INFO.cathedralName}
+                    {CHURCH_INFO.arkName}
                   </h4>
-                  <p className="text-[#d3e4fe] text-xs mt-1">
-                    {CHURCH_INFO.address}
-                  </p>
                 </div>
               </div>
             </div>
@@ -104,7 +98,7 @@ export default function Hero({ onOpenVideo }: HeroProps) {
         </div>
 
         {/* Dynamic Countdown Component */}
-        <CountdownTimer />
+        {/* <CountdownTimer /> */}
 
         {/* Stats Ribbon */}
         {/* <div className="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">

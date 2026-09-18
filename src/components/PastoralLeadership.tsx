@@ -43,7 +43,7 @@ export default function PastoralLeadership() {
             </div>
 
             <h2 className="font-headline text-3xl sm:text-4xl font-extrabold text-[#000922] leading-tight">
-              Welcome to <span className="text-[#904d00]">{CHURCH_INFO.cathedralName}</span> for All Nations
+              Welcome to <span className="text-[#904d00]">{CHURCH_INFO.arkName}</span> for All Nations
             </h2>
 
             <div className="space-y-4 text-[#45464e] text-base leading-relaxed">

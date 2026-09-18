@@ -11,8 +11,8 @@ Welcome to the central information and media archive gathered for **Gospel Pilla
 | **[CHURCH_PROFILE.md](./CHURCH_PROFILE.md)** | Complete ministry overview, 2026 theme, leadership profile, beliefs, vision, mission, and campus facilities. |
 | **[SERVICES_AND_PROGRAMS.md](./SERVICES_AND_PROGRAMS.md)** | Detailed schedule for Sunday services, Midweek Word & Miracle, Friday Reblaze, and special conferences. |
 | **[VIDEOS_AND_LIVESTREAMS.md](./VIDEOS_AND_LIVESTREAMS.md)** | YouTube channels, live service stream URLs, OneSound Revival TV, playlists, and audiobooks. |
-| **[GIVING_AND_ACCOUNTS.md](./GIVING_AND_ACCOUNTS.md)** | Verified Zenith Bank account numbers for tithes, offerings, cathedral project, food bank, and partnership. |
-| **[IMAGES_AND_GALLERY.md](./IMAGES_AND_GALLERY.md)** | Direct URLs, high-resolution photos, church logos, cathedral architecture, pastoral portraits, and worship events. |
+| **[GIVING_AND_ACCOUNTS.md](./GIVING_AND_ACCOUNTS.md)** | Verified Zenith Bank account numbers for tithes, offerings, Sanctuary project, food bank, and partnership. |
+| **[IMAGES_AND_GALLERY.md](./IMAGES_AND_GALLERY.md)** | Direct URLs, high-resolution photos, church logos, Sanctuary architecture, pastoral portraits, and worship events. |
 | **`images/`** | Local image assets downloaded directly into this repository. |
 
 ---
@@ -20,7 +20,7 @@ Welcome to the central information and media archive gathered for **Gospel Pilla
 ## Quick Reference Summary
 
 *   **Church Name:** Gospel Pillars International Church (Ikeja Global HQ)
-*   **Cathedral Complex:** **The Ark of Light for All Nations**
+*   **Sanctuary Complex:** **The Ark of Light for All Nations**
 *   **Physical Address:** Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos State, Nigeria
 *   **General Overseer:** Prophet Dr. Isaiah Macwealth
 *   **Co-Senior Pastor:** Prophetess Lily Anita Macwealth

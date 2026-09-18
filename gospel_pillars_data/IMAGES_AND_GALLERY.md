@@ -14,14 +14,14 @@ This document indexes all verified, high-resolution visual assets for Gospel Pil
 
 ---
 
-## 2. Cathedral Architecture & Campus (The Ark of Light, Ikeja)
+## 2. Sanctuary Architecture & Campus (The Ark of Light, Ikeja)
 
 | Asset | Preview Description | Direct URL |
 | :--- | :--- | :--- |
-| **Ark of Light Exterior Architecture** | 10,000-seat mega-cathedral on Kudirat Abiola Way | `https://gospelpillars.org/wp-content/uploads/2024/01/Ark-of-Light-Mokup-main-scaled.webp` |
-| **Cathedral Sanctuary Interior** | Grand wide-angle view of the multi-tiered hall | `https://lh3.googleusercontent.com/aida-public/AB6AXuCsWZ0hOVvhT_30uavMeGy7IQhVnk5oC5oJS_-8yDVfj7-0ZE1xF3aPzXlUQCy8pgOtg5gtbk7f-DRv_AqynXMfMTDcL653x_cfxFjgULyvtscVk962QA06Wma6MJ2lFM2gFw0qxrNAHlCNLRmSHwLxeIPyI0izTMXQD7n6HwLy3kf2huiaLNJY2hUMveAvMGLQFTg0rZTlKvbqSDfDCy65iHNq88ntCgBByXkWKvjlJT9i5tQTBf8D7BSK9JaiDlFu6_Zxf9cpGUk` |
+| **Ark of Light Exterior Architecture** | 10,000-seat mega-Sanctuary on Kudirat Abiola Way | `https://gospelpillars.org/wp-content/uploads/2024/01/Ark-of-Light-Mokup-main-scaled.webp` |
+| **Sanctuary Sanctuary Interior** | Grand wide-angle view of the multi-tiered hall | `https://lh3.googleusercontent.com/aida-public/AB6AXuCsWZ0hOVvhT_30uavMeGy7IQhVnk5oC5oJS_-8yDVfj7-0ZE1xF3aPzXlUQCy8pgOtg5gtbk7f-DRv_AqynXMfMTDcL653x_cfxFjgULyvtscVk962QA06Wma6MJ2lFM2gFw0qxrNAHlCNLRmSHwLxeIPyI0izTMXQD7n6HwLy3kf2huiaLNJY2hUMveAvMGLQFTg0rZTlKvbqSDfDCy65iHNq88ntCgBByXkWKvjlJT9i5tQTBf8D7BSK9JaiDlFu6_Zxf9cpGUk` |
 | **Main Hall Gallery View** | Soaring ceiling and curved seating balconies | `https://gospelpillars.org/wp-content/uploads/2025/11/Greater-Glory-Gathering-G3-Grand-finale-main-hall-gallery.webp` |
-| **Cathedral Outer View** | Exterior perspective of the complex during conference | `https://gospelpillars.org/wp-content/uploads/2025/11/Greater-Glory-Gathering-G3-Grand-finale-outside-church.webp` |
+| **Sanctuary Outer View** | Exterior perspective of the complex during conference | `https://gospelpillars.org/wp-content/uploads/2025/11/Greater-Glory-Gathering-G3-Grand-finale-outside-church.webp` |
 
 ---
 

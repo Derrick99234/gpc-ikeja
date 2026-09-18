@@ -9,7 +9,7 @@
     --secondary-container: #fe932c;
     --celestial-gold: #f59e0b;
     --radiant-gold-light: #fbbf24;
-    --cathedral-ivory: #faf9f6;
+    --warm-ivory: #faf9f6;
     --surface: #f8f9ff;
     --surface-subtle: #f1f5f9;
     --surface-container: #e5eeff;
@@ -82,4 +82,53 @@
 
 .animate-pulse-glow {
   animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Smooth Infinite Marquee for Photo Gallery */
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 38s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeRight 42s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee-left,
+.marquee-container:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+@keyframes floatSubtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-float-subtle {
+  animation: floatSubtle 3s ease-in-out infinite;
 }

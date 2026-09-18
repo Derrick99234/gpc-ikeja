@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     siteName: "Gospel Pillars Church Ikeja",
     images: [
       {
-        url: "/images/ark_of_light_cathedral.webp",
+        url: "/images/ark_of_light.webp",
         width: 1200,
         height: 630,
-        alt: "The Ark of Light Cathedral Ikeja"
+        alt: "The Ark of Light Ikeja"
       }
     ],
     locale: "en_US",
@@ -60,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${montserrat.variable} ${plusJakartaSans.variable}`}>
+    <html lang="en" className={`scroll-smooth ${montserrat.variable} ${plusJakartaSans.variable}`} suppressHydrationWarning>
       <head>
         {/* Google Material Symbols */}
         <link
@@ -68,7 +68,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         />
       </head>
-      <body className="bg-[#f8f9ff] text-[#0b1c30] antialiased selection:bg-[#f59e0b] selection:text-[#070d1a]">
+      <body
+        className="bg-[#f8f9ff] text-[#0b1c30] antialiased selection:bg-[#f59e0b] selection:text-[#070d1a]"
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

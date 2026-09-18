@@ -1,32 +1,18 @@
-import { CHURCH_INFO, SERVICE_SCHEDULES } from "@/data/churchData";
+import Image from "next/image";
+import { SERVICE_SCHEDULES } from "@/data/churchData";
 
 export default function ServiceSchedule() {
   return (
     <section className="py-16 sm:py-20 lg:py-28 bg-[#faf9f6]" id="schedule">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-6">
-          <div>
-            <div className="inline-flex items-center gap-2 text-[#904d00] text-xs uppercase tracking-widest font-bold mb-3">
-              <span className="material-symbols-outlined text-sm">schedule</span>
-              <span>Gather With Us in His Presence</span>
-            </div>
-            <h2 className="font-headline text-2xl sm:text-4xl font-extrabold text-[#000922] tracking-tight">
-              Weekly Services &amp; Encounters
-            </h2>
-            <p className="text-sm sm:text-lg text-[#45464e] max-w-2xl mt-2">
-              Every gathering at The Ark of Light is charged with the manifest presence of God, deep apostolic revelation, spontaneous prophetic ministrations, and miraculous testimonies.
-            </p>
-          </div>
-
-          {/* Location Tag */}
-          <div className="bg-[#e5eeff] p-3.5 sm:p-4 rounded-xl border border-[#c5c6cf]/30 flex items-center gap-3 w-full md:w-auto">
-            <span className="material-symbols-outlined text-[#904d00] text-2xl flex-shrink-0">pin_drop</span>
-            <div>
-              <p className="text-[11px] uppercase font-bold text-[#904d00]">Campus Auditorium</p>
-              <p className="font-headline text-xs sm:text-sm font-bold text-[#000922]">Plot 11, Kudirat Abiola Way, Alausa</p>
-            </div>
-          </div>
+        <div className="mb-10 sm:mb-16">
+          <h2 className="font-headline text-2xl sm:text-4xl font-extrabold text-[#000922] tracking-tight">
+            Weekly Services &amp; Encounters
+          </h2>
+          <p className="text-sm sm:text-lg text-[#45464e] max-w-2xl mt-2 leading-relaxed">
+            Every gathering at The Ark of Light is charged with the manifest presence of God, deep apostolic revelation, spontaneous prophetic ministrations, and miraculous testimonies.
+          </p>
         </div>
 
         {/* Bento Grid of Services */}
@@ -35,7 +21,7 @@ export default function ServiceSchedule() {
           <div className="bg-white rounded-2xl p-5 sm:p-8 border border-[#c5c6cf]/40 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#904d00] to-[#f59e0b]"></div>
             <div>
-              <div className="flex items-center justify-between mb-5 sm:mb-6">
+              <div className="flex items-center justify-between mb-4 sm:mb-5">
                 <span className="px-3 py-1 bg-[#e5eeff] text-[#000922] text-xs uppercase font-bold rounded">
                   {SERVICE_SCHEDULES[0].tag}
                 </span>
@@ -43,7 +29,19 @@ export default function ServiceSchedule() {
                   wb_sunny
                 </span>
               </div>
-              <h3 className="font-headline text-lg sm:text-xl font-bold text-[#000922] mb-3">
+
+              {/* Sunday Service Image */}
+              <div className="relative h-44 sm:h-48 w-full rounded-xl overflow-hidden mb-5 border border-[#c5c6cf]/30 group">
+                <Image
+                  src="/images/worship_crowd_shot.webp"
+                  alt="Sunday Worship Service"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-[#000922] mb-2 sm:mb-3">
                 {SERVICE_SCHEDULES[0].title}
               </h3>
               <p className="text-xs sm:text-sm text-[#45464e] mb-6 leading-relaxed">
@@ -75,7 +73,7 @@ export default function ServiceSchedule() {
           <div className="bg-white rounded-2xl p-5 sm:p-8 border border-[#c5c6cf]/40 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#0f2042]"></div>
             <div>
-              <div className="flex items-center justify-between mb-5 sm:mb-6">
+              <div className="flex items-center justify-between mb-4 sm:mb-5">
                 <span className="px-3 py-1 bg-[#e5eeff] text-[#000922] text-xs uppercase font-bold rounded">
                   {SERVICE_SCHEDULES[1].tag}
                 </span>
@@ -83,7 +81,19 @@ export default function ServiceSchedule() {
                   menu_book
                 </span>
               </div>
-              <h3 className="font-headline text-lg sm:text-xl font-bold text-[#000922] mb-3">
+
+              {/* Midweek Bible Study Image */}
+              <div className="relative h-44 sm:h-48 w-full rounded-xl overflow-hidden mb-5 border border-[#c5c6cf]/30 group">
+                <Image
+                  src="/images/ark_main_hall_gallery.webp"
+                  alt="Midweek Bible Study"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-[#000922] mb-2 sm:mb-3">
                 {SERVICE_SCHEDULES[1].title}
               </h3>
               <p className="text-xs sm:text-sm text-[#45464e] mb-6 leading-relaxed">
@@ -103,17 +113,15 @@ export default function ServiceSchedule() {
                 <span className="material-symbols-outlined text-sm">event_available</span>
                 Midweek Gathering
               </span>
-              <a href="#visit-planner" className="text-[#904d00] font-bold hover:underline">
-                Plan a Visit
-              </a>
+              <span className="font-semibold text-[#904d00]">In-Person &amp; Online</span>
             </div>
           </div>
 
           {/* Card 3: Friday */}
           <div className="bg-[#0f2042] text-[#faf9f6] rounded-2xl p-5 sm:p-8 border border-[#f59e0b]/30 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-            <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-[#f59e0b]/10 rounded-full blur-2xl"></div>
+            <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-[#f59e0b]/10 rounded-full blur-2xl pointer-events-none"></div>
             <div>
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center justify-between mb-4 sm:mb-5">
                 <span className="px-3 py-1 bg-[#f59e0b]/20 text-[#fbbf24] text-xs uppercase font-bold rounded border border-[#f59e0b]/30">
                   {SERVICE_SCHEDULES[2].tag}
                 </span>
@@ -121,32 +129,39 @@ export default function ServiceSchedule() {
                   local_fire_department
                 </span>
               </div>
-              <h3 className="font-headline text-xl font-bold text-[#faf9f6] mb-3">
+
+              {/* Friday Reblaze Prayer Image */}
+              <div className="relative h-44 sm:h-48 w-full rounded-xl overflow-hidden mb-5 border border-white/10 group">
+                <Image
+                  src="/images/overflow_gathering.webp"
+                  alt="Friday Reblaze Prayer Service"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-[#faf9f6] mb-2 sm:mb-3">
                 {SERVICE_SCHEDULES[2].title}
               </h3>
-              <p className="text-sm text-[#d3e4fe] mb-6">
+              <p className="text-xs sm:text-sm text-[#d3e4fe] mb-6 leading-relaxed">
                 {SERVICE_SCHEDULES[2].description}
               </p>
 
-              <div className="space-y-4 border-t border-white/10 pt-4">
-                <div className="flex justify-between items-center py-2 border-b border-white/10">
+              <div className="space-y-3 sm:space-y-4 border-t border-white/10 pt-4">
+                <div className="flex justify-between items-center py-2">
                   <span className="font-bold text-sm text-[#faf9f6]">Every Friday Evening</span>
-                  <span className="text-sm font-bold text-[#fbbf24]">6:00 PM – 8:30 PM</span>
+                  <span className="text-sm font-bold text-[#fbbf24]">7:00 PM – 8:00 PM</span>
                 </div>
-                <p className="text-xs text-[#d3e4fe]/90 italic">
-                  &ldquo;Where the fire of the Lord descends to consume infirmities, break curses, and impart mantles of speed.&rdquo;
-                </p>
               </div>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-white/10">
-              <a
-                className="inline-flex items-center justify-between w-full text-[#fbbf24] text-xs font-bold uppercase tracking-wider hover:underline"
-                href="#visit-planner"
-              >
-                <span>Send Prayer Petition Ahead</span>
-                <span className="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
+            <div className="mt-6 sm:mt-8 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#d3e4fe]">
+              <span className="flex items-center gap-1.5 font-semibold text-[#fbbf24]">
+                <span className="material-symbols-outlined text-sm">local_fire_department</span>
+                Altar of Intercession
+              </span>
+              <span className="font-semibold text-[#fbbf24]">7:00 PM WAT</span>
             </div>
           </div>
         </div>

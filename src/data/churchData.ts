@@ -31,9 +31,9 @@ export interface MinistryItem {
 export const CHURCH_INFO = {
   name: "Gospel Pillars Church",
   fullName: "Gospel Pillars International Churches",
-  cathedralName: "The Ark of Light",
-  branch: "Ikeja Global Headquarters",
-  slogans: ["Where God is.", "The Place of His Glory."],
+  arkName: "The Ark of Light",
+  branch: "Global Headquarters",
+  slogans: ["Where God is", "The Place of His Glory."],
   themeYear: "2026",
   themeTitle: "Glory, Overflow and Dominion",
   themeScripture: "Genesis 1:26",
@@ -54,28 +54,25 @@ export const CHURCH_VISION_MISSION = {
   priorities: [
     {
       number: "01",
-      title: "The Honour of God",
-      desc: "Upholding God's supreme majesty, holy reverence, and divine directives in every spiritual endeavor and leadership decision.",
+      text: "The Honour of God in all decisions.",
       icon: "military_tech"
     },
     {
       number: "02",
-      title: "The Sight of God",
-      desc: "Revealing the manifest presence and glory of God so tangibly that hearts are drawn to genuine repentance and worship.",
+      text: "The Sight of God in manifestation.",
       icon: "visibility"
     },
     {
       number: "03",
-      title: "The Power of God",
-      desc: "Demonstrating supernatural signs, wonders, miraculous healings, and prophetic deliverance across all peoples and nations.",
+      text: "The Power of God in demonstration to all peoples, nations, and governments.",
       icon: "bolt"
     }
   ],
   pattern: "Eradicating human efforts and dependence on the arm of flesh by leaning solely on JEHOVAH as LORD and MASTER, with full dependence on the Holy Spirit.",
   mandate: [
-    { target: "1 Billion Souls", description: "Global end-time harvest preparing the earth for Yeshua's return", icon: "public" },
-    { target: "3 Million Jews", description: "Spiritual awakening and Messianic salvation in Christ", icon: "synagogue" },
-    { target: "Second Coming", description: "Equipping a glorious, holy, and uncompromising church", icon: "auto_awesome" }
+    { target: "Prepare for the Second Coming of the LORD", icon: "cloud" },
+    { target: "1 Billion Souls Harvest", icon: "public" },
+    { target: "3 Million Jews Conversion", icon: "synagogue" }
   ],
   resolution: "To die to the fear of man and live to the fear of God."
 };
@@ -113,7 +110,7 @@ export const LEADERSHIP_INFO = {
 };
 
 export const STATS = [
-  { value: "10,000+", label: "Sanctuary Capacity", sub: "Acoustically engineered cathedral" },
+  { value: "10,000+", label: "Sanctuary Capacity", sub: "Acoustically engineered auditorium" },
   { value: "24/7", label: "OneSound Revival TV", sub: "Continuous satellite broadcasting" },
   { value: "150,000+", label: "Meals Distributed", sub: "Through the Ark Food Bank" },
   { value: "100+", label: "Global Church Plants", sub: "Across four continents" }
@@ -123,11 +120,11 @@ export const SERVICE_SCHEDULES: ServiceScheduleItem[] = [
   {
     id: "sunday",
     day: "Sunday Gatherings",
-    title: "Sunday Glory Celebrations",
+    title: "Sunday Service",
     time: "1st: 8:00 AM - 9:15 AM | 2nd: 9:15 AM - 11:00 AM",
-    description: "High praise, celestial worship, expository apostolic doctrine, and the miraculous flow of the Holy Spirit.",
-    tag: "Lord's Day",
-    highlight: "Arrival: 7:50 AM • In-Person & Online",
+    description: "A joyful atmosphere to praise and dance before the Lord, grow spiritually, and receive life-transforming revelation from God's Word.",
+    tag: "Sunday Gathering",
+    highlight: "Doors Open: 7:45 AM • Arrival: 7:50 AM",
     icon: "wb_sunny"
   },
   {
@@ -135,77 +132,50 @@ export const SERVICE_SCHEDULES: ServiceScheduleItem[] = [
     day: "Midweek Gathering",
     title: "Midweek Service",
     time: "Every Wednesday | 7:00 PM – 9:00 PM WAT",
-    description: "In-depth expository revelation of the Scriptures accompanied by instant healing and prophetic deliverance.",
-    tag: "Midweek Service",
-    highlight: "Word & Prayer Encounter",
+    description: "An enriching expository Bible study designed to ground believers in scriptural truth, practical wisdom for business and career, and spiritual maturity.",
+    tag: "Bible Study",
+    highlight: "Word & Wisdom Encounter",
     icon: "menu_book"
   },
   {
     id: "friday",
     day: "Prayer & Intercession",
     title: "Friday Reblaze Prayer",
-    time: "Every Friday Evening | 6:00 PM – 8:30 PM WAT",
-    description: "Intense Holy Ghost intercession, spiritual warfare, prophetic decreeing, and personal rejuvenation under the fire of the altar.",
-    tag: "Revival Fire",
-    highlight: "Send Prayer Petitions Ahead",
+    time: "Every Friday Evening | 7:00 PM – 8:00 PM WAT",
+    description: "An intense spiritual altar of fervent prayer, Holy Ghost intercession, and personal revival where burdens are lifted and spiritual strength is renewed.",
+    tag: "Revival Prayer",
+    highlight: "Altar of Intercession",
     icon: "local_fire_department"
   }
 ];
 
 export const BANK_ACCOUNTS: BankAccount[] = [
   {
-    id: "tithe",
-    category: "Tithe & Firstfruit",
-    accountName: "Gospel Pillars Ministry Lagos",
-    accountNumber: "1012870407",
-    bankName: "Zenith Bank PLC",
-    description: "General ministry tithes, firstfruit covenants, and foundational worship honor.",
-    icon: "payments"
-  },
-  {
-    id: "offering",
-    category: "General Offering",
-    accountName: "Gospel Pillars Int'l Church Lagos HQ",
-    accountNumber: "1015224331",
-    bankName: "Zenith Bank PLC",
-    description: "Sunday and midweek worship offerings, seed sowing, and operations.",
+    id: "offerings",
+    category: "Offerings",
+    accountName: "Gospel Pillars Church Ikeja",
+    accountNumber: "1313569390",
+    bankName: "Zenith Bank",
+    description: "Sunday and midweek worship offerings, seed sowing, and thanksgiving.",
     icon: "church"
   },
   {
-    id: "sanctuary",
-    category: "Ark of Light Sanctuary",
-    accountName: "Ark of Light for All Nations Sanctuary",
-    accountNumber: "1310011908",
-    bankName: "Zenith Bank PLC",
-    description: "Building, architecture, and infrastructure expansion of the cathedral.",
-    icon: "foundation"
-  },
-  {
-    id: "foodbank",
-    category: "Ark Food Bank (TIWI)",
-    accountName: "Isaiah Wealth Initiative (Ark Food Bank)",
-    accountNumber: "1013167948",
-    bankName: "Zenith Bank PLC",
-    description: "Feeding indigent families, orphans, disaster relief, and community aid.",
-    icon: "volunteer_activism"
+    id: "tithes",
+    category: "Tithes",
+    accountName: "Gospel Pillars Church Ikeja",
+    accountNumber: "1311531234",
+    bankName: "Zenith Bank",
+    description: "Covenant tithes, firstfruits, and foundational worship honor to God.",
+    icon: "payments"
   },
   {
     id: "partnership",
-    category: "Ministry Partnership",
-    accountName: "Gospel Pillars Ministry",
-    accountNumber: "1012861782",
-    bankName: "Zenith Bank PLC",
-    description: "Mission Assisted Project (MAP) and global kingdom propagation.",
+    category: "GGP- Partnership",
+    accountName: "Gospel Pillars Church Ikeja",
+    accountNumber: "1311681081",
+    bankName: "Zenith Bank",
+    description: "Global Gospel Partnership, kingdom advancement, and missionary support.",
     icon: "handshake"
-  },
-  {
-    id: "thanksgiving",
-    category: "Thanksgiving Offering",
-    accountName: "Gospel Pillars Int'l Operations",
-    accountNumber: "1015307166",
-    bankName: "Zenith Bank PLC",
-    description: "Vows, annual gratitude offerings, and celebration seed donations.",
-    icon: "celebration"
   }
 ];
 
@@ -249,6 +219,7 @@ export const MEDIA_LINKS = {
   liveStreamChannel: "https://www.youtube.com/@gospelpillarsinternational/live",
   teachingsChannel: "https://youtube.com/@isaiahmacwealth",
   audioBooksChannel: "https://www.youtube.com/@MacwealthAudioBooks/videos",
-  facebookPage: "https://web.facebook.com/isaiahmacwealth",
-  instagramPage: "https://www.instagram.com/isaiahmacwealth/"
+  facebookPage: "https://www.facebook.com/share/1ByvCzBdPs/?mibextid=wwXIfr",
+  instagramPage: "https://www.instagram.com/gpc.ikeja?stkn=MWx1a2E3NGgwb2t0Nw%3D%3D&utm_source=qr",
+  tiktokPage: "https://www.tiktok.com/@gpc.ikeja?_r=1&_t=ZS-99pkWlnMcra"
 };

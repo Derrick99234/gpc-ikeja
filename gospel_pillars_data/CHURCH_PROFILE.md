@@ -2,8 +2,8 @@
 
 ## 1. Overview & Identity
 *   **Official Name:** Gospel Pillars International Churches (GPIC)
-*   **Branch / Status:** Global Headquarters & Ikeja Mega-Cathedral
-*   **Cathedral Name:** **The Ark of Light for All Nations**
+*   **Branch / Status:** Global Headquarters & Ikeja Mega-Sanctuary
+*   **Sanctuary Name:** **The Ark of Light for All Nations**
 *   **Commissioning Date:** November 11, 2023
 *   **Physical Address:** Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos, Nigeria (near Lagos State Secretariat and Oregun Junction)
 *   **Motto / Slogan:** *"Where God is."* • *"The Place of His Glory."*
