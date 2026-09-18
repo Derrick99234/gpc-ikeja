@@ -1,0 +1,129 @@
+:root {
+  --primary: #061129;
+  --primary-deep: #030816;
+  --primary-container: #0f2042;
+  --secondary: #904d00;
+  --secondary-container: #fe932c;
+  --gold-radiant: #fbbf24;
+  --gold-celestial: #f59e0b;
+  --gold-deep: #d97706;
+  --surface: #f8f9ff;
+  --surface-lowest: #ffffff;
+  --surface-low: #eff4ff;
+  --surface-container: #e5eeff;
+  --surface-high: #dce9ff;
+  --text-primary: #0b1c30;
+  --text-muted: #596b82;
+  --text-light: #eaf1ff;
+  --border-subtle: rgba(229, 238, 255, 0.4);
+  --gold-glow: rgba(245, 158, 11, 0.25);
+  --card-shadow: 0 10px 30px -5px rgba(6, 17, 41, 0.08);
+  --card-shadow-hover: 0 20px 40px -10px rgba(6, 17, 41, 0.16);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #061129;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3c60;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-celestial);
+}
+
+/* Animations & Effects */
+.celestial-glow {
+  box-shadow: 0 0 50px rgba(245, 158, 11, 0.22);
+}
+
+.sanctuary-elevation {
+  box-shadow: 0 20px 48px -8px rgba(15, 32, 66, 0.2), 0 1px 0 1px rgba(245, 158, 11, 0.3) inset;
+}
+
+.glass-navy {
+  background: rgba(15, 32, 66, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-gold {
+  background: rgba(245, 158, 11, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* Pulse animation for Live Badges */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Toast notification styling */
+#toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #0f2042;
+  color: #fff;
+  border-left: 4px solid #f59e0b;
+  padding: 14px 22px;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Modal Styling */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 8, 22, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  transform: scale(0.92);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-content {
+  transform: scale(1);
+}

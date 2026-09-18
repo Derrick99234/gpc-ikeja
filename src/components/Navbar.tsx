@@ -1,0 +1,229 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { CHURCH_INFO } from "@/data/churchData";
+
+interface NavbarProps {
+  onOpenVideo?: () => void;
+}
+
+export default function Navbar({ onOpenVideo }: NavbarProps) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  return (
+    <>
+      {/* 1. TOP GLOBAL NOTIFICATION BAR */}
+      <div className="bg-[#070d1a] text-[#faf9f6] border-b border-[#f59e0b]/20 py-2.5 px-4 sm:px-8 relative z-50 text-xs">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+          {/* Left: Live Broadcast Indicator */}
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-600/20 border border-red-500/40 text-[#faf9f6] font-semibold text-[11px] uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-red-500 -ml-2.5"></span>
+              Live Global Broadcast
+            </span>
+            <span className="hidden md:inline text-[#d3e4fe]/80 text-[12px]">
+              Transmitting live from <strong>{CHURCH_INFO.cathedralName}</strong>, Alausa, Ikeja
+            </span>
+          </div>
+
+          {/* Right: Direct Helpline & Prayer Line */}
+          <div className="flex items-center gap-4 sm:gap-6 text-[12px]">
+            <a
+              className="inline-flex items-center gap-1.5 text-[#fbbf24] hover:text-white transition-colors"
+              href={`tel:${CHURCH_INFO.hotlines[0]}`}
+            >
+              <span className="material-symbols-outlined text-[16px]">call</span>
+              <span>{CHURCH_INFO.hotlines[0]}</span>
+            </a>
+            <span className="hidden sm:inline text-gray-500/50">|</span>
+            <div className="hidden sm:flex items-center gap-1.5 text-[#faf9f6]/90">
+              <span className="material-symbols-outlined text-[16px] text-[#f59e0b]">location_on</span>
+              <span>Plot 11, Kudirat Abiola Way, Alausa, Ikeja</span>
+            </div>
+            <a
+              className="inline-flex items-center gap-1 bg-[#f59e0b]/20 hover:bg-[#f59e0b]/30 text-[#fbbf24] px-3 py-1 rounded border border-[#f59e0b]/40 transition-all font-semibold"
+              href="#visit-planner"
+            >
+              <span className="material-symbols-outlined text-[14px]">favorite</span>
+              <span>Prayer Line</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. STICKY APP BAR */}
+      <header className="bg-[#faf9f6]/95 backdrop-blur-md sticky top-0 z-40 border-b border-[#c5c6cf]/30 shadow-sm transition-all">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-20">
+          {/* Brand Logo & Church Name */}
+          <Link href="/" className="flex items-center gap-3.5 group">
+            <div className="w-12 h-12 rounded-xl bg-[#0f2042] border border-[#f59e0b]/40 flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform">
+              <Image
+                src="/images/gpc_logo.png"
+                alt="Gospel Pillars Logo"
+                width={48}
+                height={48}
+                className="w-full h-full object-contain filter drop-shadow"
+                priority
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-headline font-extrabold text-[#000922] text-base sm:text-lg tracking-wide uppercase leading-tight group-hover:text-[#904d00] transition-colors">
+                {CHURCH_INFO.name}
+              </span>
+              <span className="text-[11px] text-[#904d00] tracking-widest font-bold uppercase">
+                {CHURCH_INFO.cathedralName} • Ikeja
+              </span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center space-x-7 text-sm font-semibold">
+            <a className="text-[#904d00] font-bold border-b-2 border-[#904d00] pb-1 transition-colors" href="#about">
+              About
+            </a>
+            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#schedule">
+              Services
+            </a>
+            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#live-stream">
+              Live Stream
+            </a>
+            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#ministries">
+              Ministries
+            </a>
+            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#giving">
+              Online Giving
+            </a>
+            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#campus-location">
+              Directions
+            </a>
+          </nav>
+
+          {/* Trailing Action Buttons */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Watch Live Button */}
+            <button
+              onClick={onOpenVideo}
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#e5eeff] text-[#000922] font-semibold text-xs sm:text-sm hover:bg-[#000922] hover:text-[#faf9f6] transition-all active:scale-95 border border-[#c5c6cf]/40"
+            >
+              <span className="material-symbols-outlined text-[#f59e0b] text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                play_circle
+              </span>
+              <span className="hidden sm:inline">Watch Live</span>
+            </button>
+
+            {/* Plan a Visit CTA */}
+            <a
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-gradient-to-r from-[#fe932c] to-[#f59e0b] text-[#070d1a] font-headline font-bold text-xs sm:text-sm uppercase tracking-wider shadow hover:brightness-105 active:scale-95 transition-all"
+              href="#visit-planner"
+            >
+              <span>Plan a Visit</span>
+              <span className="material-symbols-outlined text-sm hidden sm:inline">east</span>
+            </a>
+
+            {/* Mobile Drawer Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="lg:hidden p-2 rounded-lg text-[#000922] hover:bg-[#e5eeff] focus:outline-none"
+              aria-label="Open Mobile Menu"
+            >
+              <span className="material-symbols-outlined text-2xl">menu</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* 3. MOBILE SLIDE-OUT DRAWER */}
+      {isMobileMenuOpen && (
+        <div
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="fixed inset-0 bg-[#070d1a]/70 backdrop-blur-sm z-50 transition-opacity"
+        />
+      )}
+      <div
+        className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#070d1a] text-[#faf9f6] z-50 transform transition-transform duration-300 ease-in-out p-6 flex flex-col justify-between shadow-2xl border-l border-[#f59e0b]/20 ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div>
+          <div className="flex items-center justify-between pb-6 border-b border-white/10">
+            <div className="flex items-center gap-3">
+              <Image src="/images/gpc_logo.png" alt="Logo" width={32} height={32} className="object-contain" />
+              <span className="font-headline font-bold text-sm text-[#fbbf24]">Gospel Pillars Ikeja</span>
+            </div>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-2 text-[#d3e4fe] hover:text-white"
+              aria-label="Close menu"
+            >
+              <span className="material-symbols-outlined text-2xl">close</span>
+            </button>
+          </div>
+
+          <nav className="mt-8 flex flex-col space-y-5 font-semibold text-base">
+            <a
+              href="#about"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
+            >
+              About Ark of Light
+            </a>
+            <a
+              href="#schedule"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
+            >
+              Weekly Services
+            </a>
+            <a
+              href="#live-stream"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
+            >
+              Watch Live Stream
+            </a>
+            <a
+              href="#ministries"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
+            >
+              Church Ministries
+            </a>
+            <a
+              href="#giving"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
+            >
+              Giving & Tithes
+            </a>
+            <a
+              href="#visit-planner"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
+            >
+              Plan Your Visit
+            </a>
+            <a
+              href="#campus-location"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
+            >
+              Campus Directions
+            </a>
+          </nav>
+        </div>
+
+        <div className="pt-6 border-t border-white/10">
+          <p className="text-xs text-[#fbbf24] font-bold uppercase tracking-wider mb-2">Pastoral Helpline</p>
+          <a href={`tel:${CHURCH_INFO.hotlines[0]}`} className="text-base font-bold text-white flex items-center gap-2">
+            <span className="material-symbols-outlined text-[#f59e0b] text-lg">call</span>
+            <span>{CHURCH_INFO.hotlines[0]}</span>
+          </a>
+          <p className="text-[11px] text-[#d3e4fe]/70 mt-2">{CHURCH_INFO.address}</p>
+        </div>
+      </div>
+    </>
+  );
+}
