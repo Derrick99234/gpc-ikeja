@@ -81,48 +81,48 @@ export default function CountdownTimer() {
   }, []);
 
   return (
-    <div className="mt-16 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#0f2042] via-[#070d1a] to-[#0f2042] border border-[#f59e0b]/30 shadow-2xl relative overflow-hidden">
+    <div className="mt-12 sm:mt-16 p-4 sm:p-6 lg:p-8 rounded-2xl bg-gradient-to-r from-[#0f2042] via-[#070d1a] to-[#0f2042] border border-[#f59e0b]/30 shadow-2xl relative overflow-hidden">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
-        <div className="flex items-center gap-4 text-center lg:text-left">
-          <div className="w-12 h-12 rounded-full bg-[#f59e0b]/20 border border-[#f59e0b]/40 flex items-center justify-center text-[#fbbf24] flex-shrink-0">
-            <span className="material-symbols-outlined text-2xl">timer</span>
+        <div className="flex items-center gap-3 sm:gap-4 text-center lg:text-left">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#f59e0b]/20 border border-[#f59e0b]/40 flex items-center justify-center text-[#fbbf24] flex-shrink-0">
+            <span className="material-symbols-outlined text-xl sm:text-2xl">timer</span>
           </div>
           <div>
-            <span className="text-[11px] font-bold text-[#fbbf24] uppercase tracking-widest block">
+            <span className="text-[10px] sm:text-[11px] font-bold text-[#fbbf24] uppercase tracking-wider sm:tracking-widest block">
               Next Upcoming Gathering
             </span>
-            <h3 className="font-headline text-lg sm:text-xl font-bold text-[#faf9f6]">
+            <h3 className="font-headline text-base sm:text-xl font-bold text-[#faf9f6]">
               {timeLeft.serviceName}
             </h3>
           </div>
         </div>
 
         {/* Digits Display */}
-        <div className="flex items-center gap-3 sm:gap-4 font-headline">
-          <div className="flex flex-col items-center bg-[#070d1a]/80 border border-[#f59e0b]/30 rounded-xl px-3 sm:px-4 py-2 min-w-[65px] sm:min-w-[75px]">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[#fbbf24]">{timeLeft.days}</span>
-            <span className="text-[10px] uppercase font-bold text-[#d3e4fe]">Days</span>
+        <div className="flex items-center gap-1.5 sm:gap-4 font-headline">
+          <div className="flex flex-col items-center bg-[#070d1a]/80 border border-[#f59e0b]/30 rounded-xl px-2.5 sm:px-4 py-2 min-w-[54px] sm:min-w-[70px]">
+            <span className="text-xl sm:text-3xl font-extrabold text-[#fbbf24]">{timeLeft.days}</span>
+            <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#d3e4fe]">Days</span>
           </div>
-          <span className="text-[#f59e0b] font-bold text-xl">:</span>
-          <div className="flex flex-col items-center bg-[#070d1a]/80 border border-[#f59e0b]/30 rounded-xl px-3 sm:px-4 py-2 min-w-[65px] sm:min-w-[75px]">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[#fbbf24]">{timeLeft.hours}</span>
-            <span className="text-[10px] uppercase font-bold text-[#d3e4fe]">Hours</span>
+          <span className="text-[#f59e0b] font-bold text-lg sm:text-xl">:</span>
+          <div className="flex flex-col items-center bg-[#070d1a]/80 border border-[#f59e0b]/30 rounded-xl px-2.5 sm:px-4 py-2 min-w-[54px] sm:min-w-[70px]">
+            <span className="text-xl sm:text-3xl font-extrabold text-[#fbbf24]">{timeLeft.hours}</span>
+            <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#d3e4fe]">Hours</span>
           </div>
-          <span className="text-[#f59e0b] font-bold text-xl">:</span>
-          <div className="flex flex-col items-center bg-[#070d1a]/80 border border-[#f59e0b]/30 rounded-xl px-3 sm:px-4 py-2 min-w-[65px] sm:min-w-[75px]">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[#fbbf24]">{timeLeft.minutes}</span>
-            <span className="text-[10px] uppercase font-bold text-[#d3e4fe]">Mins</span>
+          <span className="text-[#f59e0b] font-bold text-lg sm:text-xl">:</span>
+          <div className="flex flex-col items-center bg-[#070d1a]/80 border border-[#f59e0b]/30 rounded-xl px-2.5 sm:px-4 py-2 min-w-[54px] sm:min-w-[70px]">
+            <span className="text-xl sm:text-3xl font-extrabold text-[#fbbf24]">{timeLeft.minutes}</span>
+            <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#d3e4fe]">Mins</span>
           </div>
-          <span className="text-[#f59e0b] font-bold text-xl">:</span>
-          <div className="flex flex-col items-center bg-[#070d1a]/80 border border-[#f59e0b]/30 rounded-xl px-3 sm:px-4 py-2 min-w-[65px] sm:min-w-[75px]">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[#fbbf24]">{timeLeft.seconds}</span>
-            <span className="text-[10px] uppercase font-bold text-[#d3e4fe]">Secs</span>
+          <span className="text-[#f59e0b] font-bold text-lg sm:text-xl">:</span>
+          <div className="flex flex-col items-center bg-[#070d1a]/80 border border-[#f59e0b]/30 rounded-xl px-2.5 sm:px-4 py-2 min-w-[54px] sm:min-w-[70px]">
+            <span className="text-xl sm:text-3xl font-extrabold text-[#fbbf24]">{timeLeft.seconds}</span>
+            <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#d3e4fe]">Secs</span>
           </div>
         </div>
 
         <a
           href="#visit-planner"
-          className="px-6 py-3 rounded-xl bg-[#f59e0b] text-[#070d1a] font-headline font-bold text-xs uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all flex-shrink-0"
+          className="w-full sm:w-auto text-center px-6 py-3 rounded-xl bg-[#f59e0b] text-[#070d1a] font-headline font-bold text-xs uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all flex-shrink-0"
         >
           Set Reminder
         </a>

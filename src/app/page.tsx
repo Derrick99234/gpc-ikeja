@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ThemeWordSection from "@/components/ThemeWordSection";
 import ServiceSchedule from "@/components/ServiceSchedule";
-import PastoralLeadership from "@/components/PastoralLeadership";
+import VisionMission from "@/components/VisionMission";
+import ProphetProfile from "@/components/ProphetProfile";
 import LiveBroadcast from "@/components/LiveBroadcast";
-import MinistriesGrid from "@/components/MinistriesGrid";
 import OnlineGiving from "@/components/OnlineGiving";
 import VisitPlanner from "@/components/VisitPlanner";
 import CampusDirections from "@/components/CampusDirections";
@@ -21,23 +22,27 @@ export default function Home() {
       {/* 1. Global Navigation & Top Bar */}
       <Navbar onOpenVideo={() => setIsVideoModalOpen(true)} />
 
-      {/* 2. Hero Section with 2026 Theme & Live Countdown */}
+      {/* 2. Hero Section with Live Countdown */}
       <Hero onOpenVideo={() => setIsVideoModalOpen(true)} />
 
-      {/* 3. Weekly Service Schedules */}
+
+      {/* 4. Weekly Service Schedules */}
       <ServiceSchedule />
 
-      {/* 4. Pastoral Leadership Profile */}
-      <PastoralLeadership />
+      {/* 4. Vision, Mission & Divine Mandate */}
+      <VisionMission />
 
-      {/* 5. Live Streaming & Satellite Broadcast */}
+      {/* 5. Head of the Ministry: Prophet Dr. Isaiah Macwealth */}
+      <ProphetProfile />
+
+      {/* 6. Live Streaming & Satellite Broadcast */}
       <LiveBroadcast />
-
-      {/* 6. Church Ministries & Outreaches */}
-      <MinistriesGrid />
 
       {/* 7. Online Giving & Stewardship */}
       <OnlineGiving />
+
+      {/* 3. Word for the Year 2026 Prophetic Declaration */}
+      <ThemeWordSection />
 
       {/* 8. VIP Visit Planner & Prayer Requests */}
       <VisitPlanner />

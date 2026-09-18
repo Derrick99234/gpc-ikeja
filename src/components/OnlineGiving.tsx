@@ -25,39 +25,39 @@ export default function OnlineGiving() {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-[#070d1a] text-[#faf9f6] relative overflow-hidden" id="giving">
+    <section className="py-16 sm:py-20 lg:py-28 bg-[#070d1a] text-[#faf9f6] relative overflow-hidden" id="giving">
       {/* Toast Alert */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-[#0f2042] text-white border-l-4 border-[#f59e0b] px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-bounce">
-          <span className="material-symbols-outlined text-[#f59e0b]">check_circle</span>
-          <span className="text-sm font-semibold">{toastMessage}</span>
+        <div className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 bg-[#0f2042] text-white border-l-4 border-[#f59e0b] px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-bounce max-w-sm">
+          <span className="material-symbols-outlined text-[#f59e0b] flex-shrink-0">check_circle</span>
+          <span className="text-xs sm:text-sm font-semibold">{toastMessage}</span>
         </div>
       )}
 
       {/* Radiant Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#f59e0b]/10 blur-[150px] pointer-events-none"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f59e0b]/15 border border-[#f59e0b]/30 mb-4">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-[#f59e0b]/15 border border-[#f59e0b]/30 mb-3 sm:mb-4">
             <span className="material-symbols-outlined text-[#fbbf24] text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>
               payments
             </span>
-            <span className="font-headline text-xs text-[#fbbf24] uppercase tracking-widest font-bold">
-              Kingdom Stewardship & Covenant Partnership
+            <span className="font-headline text-[10px] sm:text-xs text-[#fbbf24] uppercase tracking-wider sm:tracking-widest font-bold">
+              Kingdom Stewardship &amp; Covenant Partnership
             </span>
           </div>
-          <h2 className="font-headline text-3xl sm:text-4xl font-extrabold text-[#faf9f6] tracking-tight">
+          <h2 className="font-headline text-2xl sm:text-4xl font-extrabold text-[#faf9f6] tracking-tight">
             Honor the Lord with Your Substance
           </h2>
-          <p className="text-base text-[#d3e4fe] mt-3 leading-relaxed">
+          <p className="text-sm sm:text-base text-[#d3e4fe] mt-2 sm:mt-3 leading-relaxed">
             &ldquo;Give, and it will be given to you: good measure, pressed down, shaken together, and running over will be put into your bosom.&rdquo; —{" "}
             <span className="text-[#fbbf24] font-semibold">Luke 6:38</span>
           </p>
         </div>
 
         {/* Bank Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {BANK_ACCOUNTS.map((acc) => (
             <div
               key={acc.id}

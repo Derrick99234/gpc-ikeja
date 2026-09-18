@@ -19,62 +19,62 @@ export default function VisitPlanner() {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-[#faf9f6]" id="visit-planner">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="py-16 sm:py-20 lg:py-28 bg-[#faf9f6]" id="visit-planner">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="bg-white rounded-3xl border border-[#c5c6cf]/40 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
           {/* Left Column: VIP Welcome Promise */}
-          <div className="lg:col-span-5 bg-[#0f2042] text-[#faf9f6] p-8 lg:p-12 flex flex-col justify-between relative overflow-hidden">
+          <div className="lg:col-span-5 bg-[#0f2042] text-[#faf9f6] p-6 sm:p-8 lg:p-12 flex flex-col justify-between relative overflow-hidden">
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
             <div className="relative z-10">
-              <span className="text-xs uppercase tracking-widest text-[#fbbf24] font-bold">
+              <span className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-[#fbbf24] font-bold">
                 First Time Guest or Prayer Need?
               </span>
-              <h3 className="font-headline text-2xl sm:text-3xl font-bold text-[#faf9f6] mt-2 mb-4">
+              <h3 className="font-headline text-xl sm:text-2xl lg:text-3xl font-bold text-[#faf9f6] mt-2 mb-3 sm:mb-4">
                 We Are Honored to Welcome You
               </h3>
-              <p className="text-sm text-[#d3e4fe] leading-relaxed mb-6">
+              <p className="text-xs sm:text-sm text-[#d3e4fe] leading-relaxed mb-6">
                 Whether you are planning to worship with us this coming Sunday or carrying a heart burden requiring prophetic intercession, our pastoral team is ready to receive you with love.
               </p>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#f59e0b]/20 flex items-center justify-center text-[#fbbf24]">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#f59e0b]/20 flex items-center justify-center text-[#fbbf24] flex-shrink-0">
                     <span className="material-symbols-outlined text-sm">verified</span>
                   </div>
-                  <span className="text-sm text-[#faf9f6]">Reserved VIP Parking & Usher Concierge</span>
+                  <span className="text-xs sm:text-sm text-[#faf9f6]">Reserved VIP Parking &amp; Usher Concierge</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#f59e0b]/20 flex items-center justify-center text-[#fbbf24]">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#f59e0b]/20 flex items-center justify-center text-[#fbbf24] flex-shrink-0">
                     <span className="material-symbols-outlined text-sm">verified</span>
                   </div>
-                  <span className="text-sm text-[#faf9f6]">Special First-Timer Welcome Gift & Reception</span>
+                  <span className="text-xs sm:text-sm text-[#faf9f6]">Special First-Timer Welcome Gift &amp; Reception</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#f59e0b]/20 flex items-center justify-center text-[#fbbf24]">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#f59e0b]/20 flex items-center justify-center text-[#fbbf24] flex-shrink-0">
                     <span className="material-symbols-outlined text-sm">verified</span>
                   </div>
-                  <span className="text-sm text-[#faf9f6]">Confidential 24/7 Pastoral Prayer Line</span>
+                  <span className="text-xs sm:text-sm text-[#faf9f6]">Confidential 24/7 Pastoral Prayer Line</span>
                 </div>
               </div>
             </div>
 
-            <div className="relative z-10 pt-8 mt-8 border-t border-white/10">
-              <p className="text-xs text-[#fbbf24] font-semibold uppercase tracking-wider">
+            <div className="relative z-10 pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-white/10">
+              <p className="text-[11px] sm:text-xs text-[#fbbf24] font-semibold uppercase tracking-wider">
                 Immediate Pastoral Hotline:
               </p>
-              <p className="font-headline text-xl font-bold text-[#faf9f6] mt-1">
+              <p className="font-headline text-lg sm:text-xl font-bold text-[#faf9f6] mt-1">
                 {CHURCH_INFO.hotlines[0]}
               </p>
             </div>
           </div>
 
           {/* Right Column: Interactive Form */}
-          <div className="lg:col-span-7 p-8 lg:p-12">
-            <h4 className="font-headline text-2xl font-bold text-[#000922] mb-2">
+          <div className="lg:col-span-7 p-6 sm:p-8 lg:p-12">
+            <h4 className="font-headline text-xl sm:text-2xl font-bold text-[#000922] mb-1.5 sm:mb-2">
               Connect With The Ark of Light
             </h4>
-            <p className="text-sm text-[#45464e] mb-8">
+            <p className="text-xs sm:text-sm text-[#45464e] mb-6 sm:mb-8">
               Please complete this brief form and our hospitality or prayer counseling team will reach out to you promptly.
             </p>
 

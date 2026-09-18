@@ -4,8 +4,8 @@ import { CHURCH_INFO, MEDIA_LINKS } from "@/data/churchData";
 export default function Footer() {
   return (
     <footer className="bg-[#070d1a] text-[#faf9f6] border-t border-white/10" id="contact">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-white/10">
           {/* Col 1: Brand & Theme */}
           <div className="md:col-span-5 flex flex-col space-y-4">
             <div className="flex items-center gap-3">
@@ -25,7 +25,7 @@ export default function Footer() {
             <p className="text-xs text-[#f59e0b] uppercase tracking-wider font-bold">
               {CHURCH_INFO.cathedralName} • {CHURCH_INFO.branch}
             </p>
-            <p className="text-sm text-[#d3e4fe] max-w-md leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#d3e4fe] max-w-md leading-relaxed">
               Mottos: <em>&ldquo;{CHURCH_INFO.slogans[0]}&rdquo;</em> &amp; <em>&ldquo;{CHURCH_INFO.slogans[1]}&rdquo;</em>{" "}
               An apostolic and prophetic commission under the visionary leadership of Prophet Dr. Isaiah Macwealth and Prophetess Lily Anita Macwealth.
             </p>
@@ -93,20 +93,20 @@ export default function Footer() {
               Quick Navigation
             </h4>
             <ul className="space-y-2 text-xs text-[#d3e4fe]">
-              <li><a className="hover:text-[#fbbf24] transition-colors" href="#schedule">Sunday & Midweek Services</a></li>
-              <li><a className="hover:text-[#fbbf24] transition-colors" href="#live-stream">Live Stream Hub</a></li>
+              <li><a className="hover:text-[#fbbf24] transition-colors" href="#schedule">Sunday &amp; Midweek Services</a></li>
+              <li><a className="hover:text-[#fbbf24] transition-colors" href="#vision">Vision, Mission &amp; Mandate</a></li>
+              <li><a className="hover:text-[#fbbf24] transition-colors" href="#prophet">Prophet Dr. Isaiah Macwealth</a></li>
               <li><a className="hover:text-[#fbbf24] transition-colors" href="#giving">Zenith Bank Transfer Accounts</a></li>
-              <li><a className="hover:text-[#fbbf24] transition-colors" href="#ministries">Next Pillar Association (NPA)</a></li>
-              <li><a className="hover:text-[#fbbf24] transition-colors" href="#ministries">Ark Food & Emergency Bank</a></li>
-              <li><a className="hover:text-[#fbbf24] transition-colors" href="#visit-planner">Prayer Petitions</a></li>
+              <li><a className="hover:text-[#fbbf24] transition-colors" href="#visit-planner">Plan a Visit &amp; Prayer Petitions</a></li>
+              <li><a className="hover:text-[#fbbf24] transition-colors" href="#campus-location">Directions &amp; Location Map</a></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Tier */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#d3e4fe]">
+        <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#d3e4fe] text-center sm:text-left">
           <p>© {CHURCH_INFO.themeYear} {CHURCH_INFO.fullName} • {CHURCH_INFO.cathedralName}. All Rights Reserved.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <a className="hover:text-[#fbbf24] transition-colors" href="#visit-planner">Plan a Visit</a>
             <a className="hover:text-[#fbbf24] transition-colors" href="#visit-planner">Prayer Line</a>
             <a className="hover:text-[#fbbf24] transition-colors" href={CHURCH_INFO.website} target="_blank" rel="noopener noreferrer">

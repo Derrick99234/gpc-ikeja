@@ -31,7 +31,7 @@ export interface MinistryItem {
 export const CHURCH_INFO = {
   name: "Gospel Pillars Church",
   fullName: "Gospel Pillars International Churches",
-  cathedralName: "The Ark of Light for All Nations",
+  cathedralName: "The Ark of Light",
   branch: "Ikeja Global Headquarters",
   slogans: ["Where God is.", "The Place of His Glory."],
   themeYear: "2026",
@@ -47,14 +47,68 @@ export const CHURCH_INFO = {
   googleMapsEmbed: "https://maps.google.com/maps?q=ARK%20OF%20LIGHT%20FOR%20ALL%20NATION%2C%2011C%20KUDIRAT%20ABIOLA%20WAY&t=m&z=14&output=embed&iwloc=near"
 };
 
+export const CHURCH_VISION_MISSION = {
+  vision: "To reveal JEHOVAH as Almighty, all-seeing, all-knowing, and all-powerful, and YESHUA His Son as the ONLY WAY to GOD and to Salvation.",
+  purpose: "To reveal the knowledge of the glory of God to the nations as the waters cover the seas, leading to the restoration of the fear of God and the salvation of this Generation.",
+  mission: "Holiness, sanctification, and consecration to God.",
+  priorities: [
+    {
+      number: "01",
+      title: "The Honour of God",
+      desc: "Upholding God's supreme majesty, holy reverence, and divine directives in every spiritual endeavor and leadership decision.",
+      icon: "military_tech"
+    },
+    {
+      number: "02",
+      title: "The Sight of God",
+      desc: "Revealing the manifest presence and glory of God so tangibly that hearts are drawn to genuine repentance and worship.",
+      icon: "visibility"
+    },
+    {
+      number: "03",
+      title: "The Power of God",
+      desc: "Demonstrating supernatural signs, wonders, miraculous healings, and prophetic deliverance across all peoples and nations.",
+      icon: "bolt"
+    }
+  ],
+  pattern: "Eradicating human efforts and dependence on the arm of flesh by leaning solely on JEHOVAH as LORD and MASTER, with full dependence on the Holy Spirit.",
+  mandate: [
+    { target: "1 Billion Souls", description: "Global end-time harvest preparing the earth for Yeshua's return", icon: "public" },
+    { target: "3 Million Jews", description: "Spiritual awakening and Messianic salvation in Christ", icon: "synagogue" },
+    { target: "Second Coming", description: "Equipping a glorious, holy, and uncompromising church", icon: "auto_awesome" }
+  ],
+  resolution: "To die to the fear of man and live to the fear of God."
+};
+
+export const PROPHET_PROFILE = {
+  roleTag: "Head of the Ministry",
+  title: "Prophet Isaiah Macwealth",
+  designation: "General Overseer & Apostolic Leader",
+  portrait: "/images/prophet_isaiah_portrait.jpg",
+  quote: "We are on an urgent end-time commission to reveal the unadulterated power and glory of Yeshua, eradicating the arm of flesh and awakening a generation consecrated to God.",
+  scripturalAnchor: "Ephesians 4:11–13 • Isaiah 60:1–3",
+  bio: [
+    "Prophet Dr. Isaiah Macwealth is an apostolic and prophetic minister of the gospel, international teacher of kingdom mysteries, author of over 100 transformative Christian books, and a dedicated philanthropist.",
+    "Called by God with a global mandate of revival, he is the Founder and General Overseer of Gospel Pillars International Churches, with its world headquarters — The Ark of Light — situated on Plot 11, Kudirat Abiola Way, Alausa, Ikeja.",
+    "His ministry is distinguished by deep expository preaching, spontaneous prophetic revelation, verifiable healings, and supernatural interventions. Prophet Isaiah is committed to the Second Coming of the Lord, actively pursuing the prophetic harvest of 1 Billion souls and the awakening of nations.",
+    "Beyond the pulpit, his heart for humanity has touched hundreds of thousands across multiple continents through The Isaiah Wealth Initiative (TIWI), operating the Ark Food Bank, healthcare outreaches, and emergency relief programs."
+  ],
+  achievements: [
+    { value: "100+", title: "Published Books", detail: "Prolific author on faith, prayer, and doctrine" },
+    { value: "1 Billion", title: "Harvest Mandate", detail: "Global prophetic end-time commission" },
+    { value: "TIWI", title: "Humanitarian Impact", detail: "Ark Food Bank feeding thousands monthly" },
+    { value: "Global", title: "Apostolic Network", detail: "Church plants & conferences across continents" }
+  ]
+};
+
 export const LEADERSHIP_INFO = {
   generalOverseer: "Prophet Dr. Isaiah Macwealth",
   coSeniorPastor: "Prophetess Lily Anita Macwealth",
   quote: "We are an apostolic and prophetic family committed to unveiling the tangible presence, power, and glory of Jesus Christ to all nations.",
   bioParagraphs: [
-    "Beloved friend, welcome to Gospel Pillars Church Ikeja. For over two decades, the ministry of Prophet Dr. Isaiah Macwealth and Prophetess Lily Anita Macwealth has stood as an uncompromising international voice of revival, prophetic revelation, and compassionate kingdom outreach.",
-    "On November 11, 2023, the global headquarters — The Ark of Light for All Nations — was officially commissioned at Plot 11, Kudirat Abiola Way, Alausa, Ikeja. It has rapidly grown into a gospel epicenter in Lagos, welcoming thousands of worshippers each week.",
-    "Through international crusades, authorship of more than 100 life-transforming books, the OneSound Revival Fellowship, and the massive relief efforts of the Ark Food and Emergency Bank, the ministry continues to impact millions across Africa, Europe, and the Americas."
+    "Beloved friend, welcome to Gospel Pillars Church Ikeja. For over two decades, the ministry of Prophet Dr. Isaiah Macwealth has stood as an uncompromising international voice of revival, prophetic revelation, and compassionate kingdom outreach.",
+    "On November 11, 2023, the global headquarters — The Ark of Light — was officially commissioned at Plot 11, Kudirat Abiola Way, Alausa, Ikeja. It has rapidly grown into a gospel epicenter in Lagos, welcoming thousands of worshippers each week.",
+    "Through international crusades, authorship of more than 100 life-transforming books, and the massive relief efforts of the Ark Food Bank, the ministry continues to impact millions across Africa, Europe, and the Americas."
   ]
 };
 
@@ -70,20 +124,20 @@ export const SERVICE_SCHEDULES: ServiceScheduleItem[] = [
     id: "sunday",
     day: "Sunday Gatherings",
     title: "Sunday Glory Celebrations",
-    time: "1st: 8:00 AM - 9:15 AM | 2nd: 9:15 AM - 11:00 AM | 3rd: 11:00 AM (1st Sun)",
+    time: "1st: 8:00 AM - 9:15 AM | 2nd: 9:15 AM - 11:00 AM",
     description: "High praise, celestial worship, expository apostolic doctrine, and the miraculous flow of the Holy Spirit.",
     tag: "Lord's Day",
-    highlight: "Kingdom Kids & Creche Open • Arrival: 7:50 AM",
+    highlight: "Arrival: 7:50 AM • In-Person & Online",
     icon: "wb_sunny"
   },
   {
     id: "wednesday",
     day: "Midweek Gathering",
-    title: "Word & Miracle Encounter",
+    title: "Midweek Service",
     time: "Every Wednesday | 7:00 PM – 9:00 PM WAT",
-    description: "In-depth expository revelation of the Scriptures accompanied by communion, instant healing, and prophetic deliverance.",
+    description: "In-depth expository revelation of the Scriptures accompanied by instant healing and prophetic deliverance.",
     tag: "Midweek Service",
-    highlight: "Holy Communion Service • Simulcast on OneSound TV",
+    highlight: "Word & Prayer Encounter",
     icon: "menu_book"
   },
   {
