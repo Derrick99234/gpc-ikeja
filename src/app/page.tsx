@@ -7,12 +7,12 @@ import ThemeWordSection from "@/components/ThemeWordSection";
 import ServiceSchedule from "@/components/ServiceSchedule";
 import VisionMission from "@/components/VisionMission";
 import ProphetProfile from "@/components/ProphetProfile";
-import LiveBroadcast from "@/components/LiveBroadcast";
+import PhotoGallery from "@/components/PhotoGallery";
 import OnlineGiving from "@/components/OnlineGiving";
-import VisitPlanner from "@/components/VisitPlanner";
-import CampusDirections from "@/components/CampusDirections";
+import ContactAndMap from "@/components/ContactAndMap";
 import Footer from "@/components/Footer";
 import VideoModal from "@/components/VideoModal";
+import FloatingSocialWidget from "@/components/FloatingSocialWidget";
 
 export default function Home() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -35,8 +35,8 @@ export default function Home() {
       {/* 5. Head of the Ministry: Prophet Dr. Isaiah Macwealth */}
       <ProphetProfile />
 
-      {/* 6. Live Streaming & Satellite Broadcast */}
-      <LiveBroadcast />
+      {/* 6. Sanctuary & Ministry Photo Gallery */}
+      <PhotoGallery />
 
       {/* 7. Online Giving & Stewardship */}
       <OnlineGiving />
@@ -44,11 +44,8 @@ export default function Home() {
       {/* 3. Word for the Year 2026 Prophetic Declaration */}
       <ThemeWordSection />
 
-      {/* 8. VIP Visit Planner & Prayer Requests */}
-      <VisitPlanner />
-
-      {/* 9. Campus Directions & Interactive Google Maps */}
-      <CampusDirections />
+      {/* 8. Contact Form & Campus Map (Side-by-Side) */}
+      <ContactAndMap />
 
       {/* 10. Comprehensive Footer */}
       <Footer />
@@ -58,6 +55,9 @@ export default function Home() {
         isOpen={isVideoModalOpen}
         onClose={() => setIsVideoModalOpen(false)}
       />
+
+      {/* 12. Floating Chat & Social Channels Quick Menu */}
+      <FloatingSocialWidget />
     </main>
   );
 }
