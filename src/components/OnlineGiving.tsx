@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { BANK_ACCOUNTS, CHURCH_INFO } from "@/data/churchData";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function OnlineGiving() {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
 
   const handleCopy = (accountNumber: string, category: string) => {
     if (navigator.clipboard) {
@@ -25,20 +27,25 @@ export default function OnlineGiving() {
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-28 bg-[#070d1a] text-[#faf9f6] relative overflow-hidden" id="giving">
+    <section ref={ref} className="py-16 sm:py-20 lg:py-28 bg-[#070d1a] text-[#faf9f6] relative overflow-hidden" id="giving">
       {/* Toast Alert */}
       {toastMessage && (
-        <div className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 bg-[#0f2042] text-white border-l-4 border-[#f59e0b] px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-bounce max-w-sm">
+        <div className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 bg-[#0f2042] text-white border-l-4 border-[#f59e0b] px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-fade-in max-w-sm">
           <span className="material-symbols-outlined text-[#f59e0b] flex-shrink-0">check_circle</span>
           <span className="text-xs sm:text-sm font-semibold">{toastMessage}</span>
         </div>
       )}
 
-      {/* Radiant Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#f59e0b]/10 blur-[150px] pointer-events-none"></div>
+      {/* Radiant Glow with Breathing Animation */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#f59e0b]/10 blur-[150px] animate-pulse-aura pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        {/* Section Header */}
+        <div
+          className={`text-center max-w-3xl mx-auto mb-10 sm:mb-16 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <h2 className="font-headline text-2xl sm:text-4xl font-extrabold text-[#faf9f6] tracking-tight">
             Honor the Lord with Your Substance
           </h2>
@@ -48,21 +55,24 @@ export default function OnlineGiving() {
           </p>
         </div>
 
-        {/* Bank Cards Grid */}
+        {/* Bank Cards Grid with Staggered Entrance */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {BANK_ACCOUNTS.map((acc, idx) => {
             const accents = [
-              { num: "1", tagBg: "bg-red-600", borderHover: "hover:border-red-500", glow: "from-red-600/10" },
-              { num: "2", tagBg: "bg-blue-600", borderHover: "hover:border-blue-500", glow: "from-blue-600/10" },
-              { num: "3", tagBg: "bg-emerald-600", borderHover: "hover:border-emerald-500", glow: "from-emerald-600/10" }
+              { num: "1", tagBg: "bg-red-600", borderHover: "hover:border-red-500", glow: "from-red-600/15" },
+              { num: "2", tagBg: "bg-blue-600", borderHover: "hover:border-blue-500", glow: "from-blue-600/15" },
+              { num: "3", tagBg: "bg-emerald-600", borderHover: "hover:border-emerald-500", glow: "from-emerald-600/15" }
             ][idx];
 
             return (
               <div
                 key={acc.id}
-                className={`bg-[#0f2042] rounded-2xl p-6 border border-[#f59e0b]/30 flex flex-col justify-between shadow-xl ${accents?.borderHover} hover:-translate-y-1 transition-all relative overflow-hidden`}
+                style={{ transitionDelay: isVisible ? `${150 + idx * 130}ms` : "0ms" }}
+                className={`bg-[#0f2042] rounded-2xl p-6 border border-[#f59e0b]/30 flex flex-col justify-between shadow-xl ${accents?.borderHover} hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] relative overflow-hidden group ${
+                  isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[0.96]"
+                }`}
               >
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl ${accents?.glow} to-transparent rounded-full blur-xl pointer-events-none`}></div>
+                <div className={`absolute top-0 right-0 w-36 h-36 bg-gradient-to-bl ${accents?.glow} to-transparent rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700 pointer-events-none`}></div>
 
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -74,21 +84,23 @@ export default function OnlineGiving() {
                         {acc.bankName}
                       </span>
                     </div>
-                    <span className="material-symbols-outlined text-[#fbbf24] text-xl">{acc.icon}</span>
+                    <span className="material-symbols-outlined text-[#fbbf24] text-xl group-hover:scale-110 transition-transform">
+                      {acc.icon}
+                    </span>
                   </div>
 
-                  <h4 className="font-headline text-xl font-extrabold text-[#faf9f6] mb-1">
+                  <h4 className="font-headline text-xl font-extrabold text-[#faf9f6] mb-1 group-hover:text-[#fbbf24] transition-colors">
                     {acc.category}
                   </h4>
                   <p className="text-xs text-[#d3e4fe] mb-4">
                     Account Name: <strong className="text-white">{acc.accountName}</strong>
                   </p>
 
-                  <div className="bg-[#070d1a] p-4 rounded-xl border border-white/10 mb-5">
+                  <div className="bg-[#070d1a] p-4 rounded-xl border border-white/10 mb-5 group-hover:border-[#f59e0b]/30 transition-colors">
                     <span className="text-[#d3e4fe] text-[11px] uppercase tracking-wider block mb-1">
                       Account Number ({acc.bankName})
                     </span>
-                    <span className="font-headline text-2xl font-black text-[#faf9f6] font-mono tracking-widest block">
+                    <span className="font-headline text-2xl font-black text-[#faf9f6] font-mono tracking-widest block select-all">
                       {acc.accountNumber}
                     </span>
                   </div>
@@ -96,7 +108,7 @@ export default function OnlineGiving() {
 
                 <button
                   onClick={() => handleCopy(acc.accountNumber, acc.category)}
-                  className="w-full py-3 px-4 rounded-xl bg-[#f59e0b]/20 hover:bg-[#f59e0b]/30 text-[#fbbf24] border border-[#f59e0b]/40 font-headline text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all active:scale-95 shadow"
+                  className="w-full py-3 px-4 rounded-xl bg-[#f59e0b]/20 hover:bg-[#f59e0b]/30 text-[#fbbf24] border border-[#f59e0b]/40 font-headline text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all active:scale-95 shadow cursor-pointer hover:scale-[1.02]"
                 >
                   <span className="material-symbols-outlined text-sm">content_copy</span>
                   <span>Copy Account Number</span>
