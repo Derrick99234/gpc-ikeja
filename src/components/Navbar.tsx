@@ -103,6 +103,9 @@ export default function Navbar({ onOpenVideo }: NavbarProps) {
             <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#prophet">
               The Prophet
             </a>
+            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#children">
+              Children &amp; Teens
+            </a>
             <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#gallery">
               Gallery
             </a>
@@ -196,6 +199,13 @@ export default function Navbar({ onOpenVideo }: NavbarProps) {
               className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
             >
               The Prophet
+            </a>
+            <a
+              href="#children"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
+            >
+              Children &amp; Teens
             </a>
             <a
               href="#gallery"

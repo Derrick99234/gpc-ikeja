@@ -8,6 +8,7 @@ import ServiceSchedule from "@/components/ServiceSchedule";
 import VisionMission from "@/components/VisionMission";
 import ProphetProfile from "@/components/ProphetProfile";
 import PhotoGallery from "@/components/PhotoGallery";
+import ChildrenMinistrySection from "@/components/ChildrenMinistrySection";
 import OnlineGiving from "@/components/OnlineGiving";
 import ContactAndMap from "@/components/ContactAndMap";
 import Footer from "@/components/Footer";
@@ -30,7 +31,7 @@ export default function Home() {
         onOpenCalendar={() => setIsCalendarModalOpen(true)}
       />
 
-      {/* 4. Weekly Service Schedules */}
+      {/* 3. Weekly Service Schedules */}
       <ServiceSchedule />
 
       {/* 4. Vision, Mission & Divine Mandate */}
@@ -39,7 +40,10 @@ export default function Home() {
       {/* 5. Head of the Ministry: Prophet Dr. Isaiah Macwealth */}
       <ProphetProfile />
 
-      {/* 6. Sanctuary & Ministry Photo Gallery */}
+      {/* 6. Kingdom Kids & Teens Ministry */}
+      <ChildrenMinistrySection />
+
+      {/* 7. Sanctuary & Ministry Photo Gallery */}
       <PhotoGallery />
 
       {/* 7. Online Giving & Stewardship */}
