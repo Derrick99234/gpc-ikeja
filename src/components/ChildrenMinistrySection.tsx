@@ -21,18 +21,11 @@ export default function ChildrenMinistrySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         {/* Section Header */}
         <div
-          className={`text-center max-w-3xl mx-auto mb-10 sm:mb-14 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-center max-w-3xl mx-auto mb-10 sm:mb-14 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f59e0b]/15 border border-[#f59e0b]/30 text-[#904d00] text-xs font-bold uppercase tracking-wider mb-4">
-            <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>
-              child_care
-            </span>
-            <span>Nurturing the Next Generation</span>
-          </div>
           <h2 className="font-headline text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#000922] tracking-tight">
-            Kingdom Kids &amp; Teens Ministry
+            Children &amp; Teens Ministry
           </h2>
           <p className="text-sm sm:text-base text-[#45464e] mt-3 leading-relaxed">
             Raising champions of faith, godly character, and supernatural excellence in an engaging, joyful, and safe atmosphere designed specifically for every age group.
@@ -42,21 +35,19 @@ export default function ChildrenMinistrySection() {
           <div className="flex items-center justify-center gap-2 sm:gap-3 mt-8 p-1.5 bg-[#e5eeff]/70 backdrop-blur-md rounded-2xl max-w-md mx-auto border border-[#c5c6cf]/40">
             <button
               onClick={() => setActiveTab("kids")}
-              className={`flex-1 py-2.5 px-3 sm:px-4 rounded-xl font-headline text-xs sm:text-sm font-bold transition-all ${
-                activeTab === "kids"
-                  ? "bg-[#000922] text-[#faf9f6] shadow-md scale-[1.02]"
-                  : "text-[#45464e] hover:text-[#000922] hover:bg-white/60"
-              }`}
+              className={`flex-1 py-2.5 px-3 sm:px-4 rounded-xl font-headline text-xs sm:text-sm font-bold transition-all ${activeTab === "kids"
+                ? "bg-[#000922] text-[#faf9f6] shadow-md scale-[1.02]"
+                : "text-[#45464e] hover:text-[#000922] hover:bg-white/60"
+                }`}
             >
               Kingdom Kids
             </button>
             <button
               onClick={() => setActiveTab("teens")}
-              className={`flex-1 py-2.5 px-3 sm:px-4 rounded-xl font-headline text-xs sm:text-sm font-bold transition-all ${
-                activeTab === "teens"
-                  ? "bg-[#000922] text-[#faf9f6] shadow-md scale-[1.02]"
-                  : "text-[#45464e] hover:text-[#000922] hover:bg-white/60"
-              }`}
+              className={`flex-1 py-2.5 px-3 sm:px-4 rounded-xl font-headline text-xs sm:text-sm font-bold transition-all ${activeTab === "teens"
+                ? "bg-[#000922] text-[#faf9f6] shadow-md scale-[1.02]"
+                : "text-[#45464e] hover:text-[#000922] hover:bg-white/60"
+                }`}
             >
               Teens Church
             </button>
