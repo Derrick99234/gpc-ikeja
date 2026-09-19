@@ -50,7 +50,7 @@ export default function ServiceSchedule() {
               {/* Sunday Service Image */}
               <div className="relative h-44 sm:h-48 w-full rounded-xl overflow-hidden mb-5 border border-[#c5c6cf]/30">
                 <Image
-                  src="/images/worship_crowd_shot.webp"
+                  src="/images/sanctuary_auditorium_view.jpeg"
                   alt="Sunday Worship Service"
                   fill
                   className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
@@ -110,7 +110,7 @@ export default function ServiceSchedule() {
               {/* Midweek Bible Study Image */}
               <div className="relative h-44 sm:h-48 w-full rounded-xl overflow-hidden mb-5 border border-[#c5c6cf]/30">
                 <Image
-                  src="/images/ark_main_hall_gallery.webp"
+                  src="/images/congregation_word_study.jpeg"
                   alt="Midweek Bible Study"
                   fill
                   className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
@@ -166,7 +166,7 @@ export default function ServiceSchedule() {
               {/* Friday Reblaze Prayer Image */}
               <div className="relative h-44 sm:h-48 w-full rounded-xl overflow-hidden mb-5 border border-white/10">
                 <Image
-                  src="/images/overflow_gathering.webp"
+                  src="/images/altar_prayer_fervent.jpeg"
                   alt="Friday Reblaze Prayer Service"
                   fill
                   className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"

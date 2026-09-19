@@ -10,20 +10,22 @@ interface GalleryPhoto {
 }
 
 const ALL_PHOTOS: GalleryPhoto[] = [
-  { id: "ext", src: "/images/ark_exterior.webp", alt: "The Ark of Light Exterior" },
-  { id: "worship", src: "/images/worship_crowd_shot.webp", alt: "Worship Atmosphere" },
-  { id: "choir", src: "/images/adoration_choir.webp", alt: "OneSound Choir" },
-  { id: "leaders", src: "/images/prophet_and_prophetess.webp", alt: "Prophet Isaiah & Prophetess Lily Macwealth" },
-  { id: "overflow", src: "/images/overflow_gathering.webp", alt: "Revival & Prayer Encounter" },
-  { id: "hall", src: "/images/ark_main_hall_gallery.webp", alt: "10,000-Seat Sanctuary" },
-  { id: "kids", src: "/images/children_church_kingdom_kids.webp", alt: "Kingdom Kids Dynamic Church" },
-  { id: "campus", src: "/images/ark_of_light.webp", alt: "The Ark of Light Campus Overview" },
-  { id: "pastors", src: "/images/pastors_and_ministers.webp", alt: "Pastoral Council & Ministers" },
-  { id: "theme", src: "/images/theme_2026_glory_overflow_dominion.jpg", alt: "Theme 2026: Glory, Overflow & Dominion" }
+  { id: "sanctuary_packed", src: "/images/main_sanctuary_packed_service.jpeg", alt: "Main Sanctuary Sunday Service" },
+  { id: "altar_prayer", src: "/images/altar_prayer_fervent.jpeg", alt: "Fervent Altar Prayer & Intercession" },
+  { id: "ushers_welcome", src: "/images/ushers_protocol_reception.jpeg", alt: "Warm Protocol & Greeters Reception" },
+  { id: "pastor_stage", src: "/images/pastor_preaching_stage.jpeg", alt: "Apostolic Word & Preaching" },
+  { id: "kids_praise", src: "/images/children_church_praise_activity.jpeg", alt: "Kingdom Kids Praise & Worship" },
+  { id: "worship_high", src: "/images/worship_atmosphere_high_angle.jpeg", alt: "Atmosphere of Worship & Glory" },
+  { id: "teens_faith", src: "/images/teens_church_built_on_faith.jpeg", alt: "Teens Church — Built on Faith" },
+  { id: "fellowship", src: "/images/fellowship_handshake_greeting.jpeg", alt: "Warm Christian Fellowship" },
+  { id: "supernatural_2026", src: "/images/supernatural_shift_2026_group.jpeg", alt: "Experience Supernatural Shift 2026" },
+  { id: "protocol_team", src: "/images/service_protocol_team.jpeg", alt: "Sunday Service Protocol Team" },
+  { id: "surrender", src: "/images/surrendered_altar_prayer.jpeg", alt: "Deep Altar Encounter & Consecration" },
+  { id: "kids_classroom", src: "/images/children_church_classroom_tables.jpeg", alt: "Children's Church Bible Class" }
 ];
 
-const ROW_ONE_PHOTOS = ALL_PHOTOS.slice(0, 5);
-const ROW_TWO_PHOTOS = ALL_PHOTOS.slice(5, 10);
+const ROW_ONE_PHOTOS = ALL_PHOTOS.slice(0, 6);
+const ROW_TWO_PHOTOS = ALL_PHOTOS.slice(6, 12);
 
 export default function PhotoGallery() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -166,7 +168,7 @@ export default function PhotoGallery() {
         {/* Row 2: Scrolling Right */}
         <div className="animate-marquee-right flex gap-4 sm:gap-6 py-2">
           {[...ROW_TWO_PHOTOS, ...ROW_TWO_PHOTOS].map((item, idx) => {
-            const originalIndex = (idx % ROW_TWO_PHOTOS.length) + 5;
+            const originalIndex = (idx % ROW_TWO_PHOTOS.length) + 6;
             return (
               <div
                 key={`row2-${item.id}-${idx}`}

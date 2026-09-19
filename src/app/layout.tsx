@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Gospel Pillars Church Ikeja",
     images: [
       {
-        url: "/images/ark_of_light.webp",
+        url: "/images/sanctuary_service_full_hall.jpeg",
         width: 1200,
         height: 630,
         alt: "The Ark of Light Ikeja"

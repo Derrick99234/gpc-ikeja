@@ -11,7 +11,7 @@ export default function PastoralLeadership() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#904d00]/20 bg-[#0f2042] group">
               <div className="relative h-[520px] w-full">
                 <Image
-                  src="/images/prophet_and_prophetess.webp"
+                  src="/images/pastor_preaching_stage.jpeg"
                   alt={`${LEADERSHIP_INFO.generalOverseer} and ${LEADERSHIP_INFO.coSeniorPastor}`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"

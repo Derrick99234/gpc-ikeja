@@ -74,7 +74,7 @@ export default function Hero({ onOpenVideo, onOpenCalendar }: HeroProps) {
             <div className="relative bg-[#0f2042] rounded-2xl overflow-hidden border border-[#f59e0b]/30 shadow-2xl animate-float-subtle transition-transform duration-500 hover:scale-[1.02]">
               <div className="relative h-72 sm:h-96 w-full overflow-hidden group">
                 <Image
-                  src="/images/ark_of_light.webp"
+                  src="/images/main_sanctuary_packed_service.jpeg"
                   alt="The Ark of Light for All Nations Ikeja"
                   fill
                   className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
