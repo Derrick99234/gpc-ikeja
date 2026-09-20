@@ -41,7 +41,7 @@ export default function LiveBroadcast() {
                   Official Live Broadcast
                 </span>
                 <h4 className="font-headline text-lg font-bold text-[#faf9f6]">
-                  {CHURCH_INFO.arkName} Service Broadcast
+                  Gospel Pillars Church Ikeja Service Broadcast
                 </h4>
               </div>
               <div className="flex items-center gap-3">

@@ -20,7 +20,7 @@ export default function ServiceSchedule() {
             Weekly Services &amp; Encounters
           </h2>
           <p className="text-sm sm:text-lg text-[#45464e] max-w-2xl mt-2 leading-relaxed">
-            Every gathering at The Ark of Light is charged with the manifest presence of God, deep apostolic revelation, spontaneous prophetic ministrations, and miraculous testimonies.
+            Every gathering at Gospel Pillars Church Ikeja is charged with the manifest presence of God, deep apostolic revelation, spontaneous prophetic ministrations, and miraculous testimonies.
           </p>
         </div>
 

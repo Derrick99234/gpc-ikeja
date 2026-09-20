@@ -72,7 +72,7 @@ export default function VisitPlanner() {
           {/* Right Column: Interactive Form */}
           <div className="lg:col-span-7 p-6 sm:p-8 lg:p-12">
             <h4 className="font-headline text-xl sm:text-2xl font-bold text-[#000922] mb-1.5 sm:mb-2">
-              Connect With The Ark of Light
+              Connect With Gospel Pillars Church Ikeja
             </h4>
             <p className="text-xs sm:text-sm text-[#45464e] mb-6 sm:mb-8">
               Please complete this brief form and our hospitality or prayer counseling team will reach out to you promptly.
@@ -87,7 +87,7 @@ export default function VisitPlanner() {
                   Blessings, {formData.name || "Beloved Friend"}!
                 </h4>
                 <p className="text-sm text-[#45464e] mb-6">
-                  Your details have been received by the Ark of Light pastoral and protocol team. We look forward to receiving you in God&apos;s manifest glory!
+                  Your details have been received by the Gospel Pillars Church Ikeja pastoral and protocol team. We look forward to receiving you in God&apos;s manifest glory!
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}

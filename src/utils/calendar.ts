@@ -50,7 +50,7 @@ export function generateChurchCalendarICS(): string {
   const sunStart = toICSDate(sunDate);
   const sunEnd = toICSDate(sunEndDate);
 
-  const location = "The Ark of Light for All Nations, Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos, Nigeria";
+  const location = "Gospel Pillars Church Ikeja, Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos, Nigeria";
 
   const lines = [
     "BEGIN:VCALENDAR",
@@ -69,7 +69,7 @@ export function generateChurchCalendarICS(): string {
     `DTEND:${satEnd}`,
     "RRULE:FREQ=WEEKLY;BYDAY=SA",
     "SUMMARY:Reminder: Tomorrow is Sunday Service at Gospel Pillars Church",
-    "DESCRIPTION:Tomorrow is Sunday Service at The Ark of Light for All Nations, Gospel Pillars Church Ikeja.\\n\\nFirst Service: 8:00 AM | Second Service: 9:15 AM WAT.\\nPrepare your heart and family for a glorious encounter!\\nLocation: Plot 11, Kudirat Abiola Way, Alausa, Ikeja.",
+    "DESCRIPTION:Tomorrow is Sunday Service at Gospel Pillars Church Ikeja.\\n\\nFirst Service: 8:00 AM | Second Service: 9:15 AM WAT.\\nPrepare your heart and family for a glorious encounter!\\nLocation: Plot 11, Kudirat Abiola Way, Alausa, Ikeja.",
     `LOCATION:${location}`,
     "STATUS:CONFIRMED",
     "BEGIN:VALARM",
@@ -87,7 +87,7 @@ export function generateChurchCalendarICS(): string {
     `DTEND:${sunEnd}`,
     "RRULE:FREQ=WEEKLY;BYDAY=SU",
     "SUMMARY:Sunday Service - Gospel Pillars Church",
-    "DESCRIPTION:Join us for Sunday Service at The Ark of Light for All Nations, Ikeja.\\n\\nFirst Service: 8:00 AM | Second Service: 9:15 AM WAT.\\nPreacher: Prophet Dr. Isaiah Macwealth & Pastoral Team.\\nLocation: Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos.",
+    "DESCRIPTION:Join us for Sunday Service at Gospel Pillars Church Ikeja.\\n\\nFirst Service: 8:00 AM | Second Service: 9:15 AM WAT.\\nPreacher: Prophet Dr. Isaiah Macwealth & Pastoral Team.\\nLocation: Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos.",
     `LOCATION:${location}`,
     "STATUS:CONFIRMED",
     // 24-hour alarm (Saturday)
@@ -140,8 +140,8 @@ export function getGoogleCalendarSundayUrl(): string {
     text: "Sunday Service - Gospel Pillars Church",
     dates: `${start}/${end}`,
     recur: "RRULE:FREQ=WEEKLY;BYDAY=SU",
-    details: `Join us for Sunday Service at The Ark of Light for All Nations, Ikeja.\n\nFirst Service: 8:00 AM | Second Service: 9:15 AM WAT\nPreacher: Prophet Dr. Isaiah Macwealth & Pastoral Team.\n\nLocation: Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos, Nigeria.\nHotline: ${CHURCH_INFO.hotlines[0]}`,
-    location: "The Ark of Light for All Nations, Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos, Nigeria"
+    details: `Join us for Sunday Service at Gospel Pillars Church Ikeja.\n\nFirst Service: 8:00 AM | Second Service: 9:15 AM WAT\nPreacher: Prophet Dr. Isaiah Macwealth & Pastoral Team.\n\nLocation: Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos, Nigeria.\nHotline: ${CHURCH_INFO.hotlines[0]}`,
+    location: "Gospel Pillars Church Ikeja, Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos, Nigeria"
   });
 
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
@@ -161,8 +161,8 @@ export function getGoogleCalendarSaturdayUrl(): string {
     text: "Reminder: Tomorrow is Sunday Service at Gospel Pillars Church",
     dates: `${start}/${end}`,
     recur: "RRULE:FREQ=WEEKLY;BYDAY=SA",
-    details: `Tomorrow is Sunday Service at The Ark of Light for All Nations, Gospel Pillars Church Ikeja.\n\nFirst Service: 8:00 AM | Second Service: 9:15 AM WAT\nLocation: Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos.`,
-    location: "The Ark of Light for All Nations, Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos, Nigeria"
+    details: `Tomorrow is Sunday Service at Gospel Pillars Church Ikeja.\n\nFirst Service: 8:00 AM | Second Service: 9:15 AM WAT\nLocation: Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos.`,
+    location: "Gospel Pillars Church Ikeja, Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos, Nigeria"
   });
 
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
@@ -181,8 +181,8 @@ export function getOutlookCalendarSundayUrl(): string {
     subject: "Sunday Service - Gospel Pillars Church",
     startdt: sunDate.toISOString(),
     enddt: sunEndDate.toISOString(),
-    body: "Join us for Sunday Service at The Ark of Light for All Nations, Ikeja.\nFirst Service: 8:00 AM | Second Service: 9:15 AM WAT.",
-    location: "The Ark of Light for All Nations, Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos, Nigeria"
+    body: "Join us for Sunday Service at Gospel Pillars Church Ikeja.\nFirst Service: 8:00 AM | Second Service: 9:15 AM WAT.",
+    location: "Gospel Pillars Church Ikeja, Plot 11, Kudirat Abiola Way, Alausa, Ikeja, Lagos, Nigeria"
   });
 
   return `https://outlook.live.com/calendar/0/deeplink/compose?${params.toString()}`;

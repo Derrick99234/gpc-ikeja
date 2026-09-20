@@ -18,13 +18,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gospelpillars.org"),
-  title: "Gospel Pillars Church Ikeja | The Ark of Light for All Nations",
+  title: "Gospel Pillars Church Ikeja",
   description:
-    "Welcome to Gospel Pillars Church Ikeja, The Ark of Light for All Nations. Global headquarters founded by Prophet Dr. Isaiah Macwealth and Prophetess Lily Anita Macwealth at Plot 11 Kudirat Abiola Way, Alausa, Ikeja, Lagos.",
+    "Welcome to Gospel Pillars Church Ikeja, founded by Prophet Dr. Isaiah Macwealth and Prophetess Lily Anita Macwealth at Plot 11 Kudirat Abiola Way, Alausa, Ikeja, Lagos.",
   keywords: [
     "Gospel Pillars Church",
     "Gospel Pillars Ikeja",
-    "The Ark of Light for All Nations",
+    "GPC Ikeja",
     "Prophet Isaiah Macwealth",
     "Prophetess Lily Anita Macwealth",
     "Church in Ikeja",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     apple: "/images/gpc_logo.png"
   },
   openGraph: {
-    title: "Gospel Pillars Church Ikeja | The Ark of Light for All Nations",
+    title: "Gospel Pillars Church Ikeja",
     description:
-      "Experience the manifest glory of God in The Ark of Light for All Nations. Sunday worship at 8:00 AM & 9:15 AM.",
+      "Experience the manifest glory of God at Gospel Pillars Church Ikeja. Sunday worship at 8:00 AM & 9:15 AM.",
     url: "https://gospelpillars.org",
     siteName: "Gospel Pillars Church Ikeja",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: "/images/sanctuary_service_full_hall.jpeg",
         width: 1200,
         height: 630,
-        alt: "The Ark of Light Ikeja"
+        alt: "Gospel Pillars Church Ikeja"
       }
     ],
     locale: "en_US",

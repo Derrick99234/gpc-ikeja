@@ -76,7 +76,7 @@ export default function ContactAndMap() {
                     Blessings, {formData.name || "Beloved Friend"}!
                   </h4>
                   <p className="text-sm text-[#45464e] mb-6">
-                    Your message has been received by the Ark of Light pastoral team. We will connect with you shortly.
+                    Your message has been received by the Gospel Pillars Church Ikeja pastoral team. We will connect with you shortly.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -195,7 +195,7 @@ export default function ContactAndMap() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Ark of Light Ikeja Location Map"
+                    title="Gospel Pillars Church Ikeja Location Map"
                   />
                 </div>
               </div>

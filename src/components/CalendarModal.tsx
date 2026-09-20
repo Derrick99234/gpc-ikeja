@@ -65,7 +65,7 @@ export default function CalendarModal({ isOpen, onClose }: CalendarModalProps) {
                 Add to Your Calendar
               </h3>
               <p className="text-xs text-[#d3e4fe]/80">
-                Weekly reminders for Sunday service at The Ark of Light
+                Weekly reminders for Sunday service at Gospel Pillars Church Ikeja
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function CalendarModal({ isOpen, onClose }: CalendarModalProps) {
                 Sunday Service
               </h4>
               <p className="text-xs text-[#d3e4fe]/75 mt-0.5">
-                First Service: 8:00 AM | Second Service: 9:15 AM at The Ark of Light, Alausa, Ikeja.
+                First Service: 8:00 AM | Second Service: 9:15 AM at Gospel Pillars Church, Alausa, Ikeja.
               </p>
             </div>
           </div>

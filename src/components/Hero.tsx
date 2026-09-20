@@ -34,11 +34,11 @@ export default function Hero({ onOpenVideo, onOpenCalendar }: HeroProps) {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fbbf24] via-[#f59e0b] to-[#fe932c]">
                 Tangible Glory
               </span>{" "}
-              of God in The Ark of Light
+              of God at Gospel Pillars Church Ikeja
             </h1>
 
             <p className="animate-hero-desc text-sm sm:text-base lg:text-lg text-[#d3e4fe] font-normal max-w-2xl leading-relaxed">
-              Welcome to Gospel Pillars Church Ikeja — our global headquarters where God dwells, broken lives are redeemed, supernatural signs and wonders are regular experiences, and believers step into generational dominion.
+              Welcome to Gospel Pillars Church Ikeja where God dwells, broken lives are redeemed, supernatural signs and wonders are regular experiences, and believers step into generational dominion.
             </p>
 
             {/* CTAs */}
@@ -75,7 +75,7 @@ export default function Hero({ onOpenVideo, onOpenCalendar }: HeroProps) {
               <div className="relative h-72 sm:h-96 w-full overflow-hidden group">
                 <Image
                   src="/images/main_sanctuary_packed_service.jpeg"
-                  alt="The Ark of Light for All Nations Ikeja"
+                  alt="Gospel Pillars Church Ikeja"
                   fill
                   className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                   priority
