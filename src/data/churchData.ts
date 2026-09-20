@@ -30,9 +30,9 @@ export interface MinistryItem {
 
 export const CHURCH_INFO = {
   name: "Gospel Pillars Church",
-  fullName: "Gospel Pillars International Churches",
-  arkName: "The Ark of Light",
-  branch: "Global Headquarters",
+  fullName: "Gospel Pillars Church Ikeja",
+  shortName: "GPC Ikeja",
+  branch: "Ikeja Branch",
   slogans: ["Where God is", "The Place of His Glory."],
   themeYear: "2026",
   themeTitle: "Glory, Overflow and Dominion",
@@ -86,7 +86,7 @@ export const PROPHET_PROFILE = {
   scripturalAnchor: "Ephesians 4:11–13 • Isaiah 60:1–3",
   bio: [
     "Prophet Dr. Isaiah Macwealth is an apostolic and prophetic minister of the gospel, international teacher of kingdom mysteries, author of over 100 transformative Christian books, and a dedicated philanthropist.",
-    "Called by God with a global mandate of revival, he is the Founder and General Overseer of Gospel Pillars International Churches, with its world headquarters — The Ark of Light — situated on Plot 11, Kudirat Abiola Way, Alausa, Ikeja.",
+    "Called by God with a global mandate of revival, he is the Founder and General Overseer of Gospel Pillars International Churches, with Gospel Pillars Church Ikeja situated on Plot 11, Kudirat Abiola Way, Alausa, Ikeja.",
     "His ministry is distinguished by deep expository preaching, spontaneous prophetic revelation, verifiable healings, and supernatural interventions. Prophet Isaiah is committed to the Second Coming of the Lord, actively pursuing the prophetic harvest of 1 Billion souls and the awakening of nations.",
     "Beyond the pulpit, his heart for humanity has touched hundreds of thousands across multiple continents through The Isaiah Wealth Initiative (TIWI), operating the Ark Food Bank, healthcare outreaches, and emergency relief programs."
   ],
@@ -104,7 +104,7 @@ export const LEADERSHIP_INFO = {
   quote: "We are an apostolic and prophetic family committed to unveiling the tangible presence, power, and glory of Jesus Christ to all nations.",
   bioParagraphs: [
     "Beloved friend, welcome to Gospel Pillars Church Ikeja. For over two decades, the ministry of Prophet Dr. Isaiah Macwealth has stood as an uncompromising international voice of revival, prophetic revelation, and compassionate kingdom outreach.",
-    "On November 11, 2023, the global headquarters — The Ark of Light — was officially commissioned at Plot 11, Kudirat Abiola Way, Alausa, Ikeja. It has rapidly grown into a gospel epicenter in Lagos, welcoming thousands of worshippers each week.",
+    "Gospel Pillars Church Ikeja on Plot 11, Kudirat Abiola Way, Alausa, Ikeja has rapidly grown into a vibrant gospel community in Lagos, welcoming thousands of worshippers each week.",
     "Through international crusades, authorship of more than 100 life-transforming books, and the massive relief efforts of the Ark Food Bank, the ministry continues to impact millions across Africa, Europe, and the Americas."
   ]
 };
@@ -223,3 +223,95 @@ export const MEDIA_LINKS = {
   instagramPage: "https://www.instagram.com/gpc.ikeja?stkn=MWx1a2E3NGgwb2t0Nw%3D%3D&utm_source=qr",
   tiktokPage: "https://www.tiktok.com/@gpc.ikeja?_r=1&_t=ZS-99pkWlnMcra"
 };
+
+export interface DivisionalBranch {
+  id: string;
+  name: string;
+  code: string;
+  division: string;
+  venue: string;
+  address: string;
+  phone: string;
+  phoneRaw: string;
+  googleMapsQuery: string;
+}
+
+export const MAINLAND_DIVISION_BRANCHES: DivisionalBranch[] = [
+  {
+    id: "gpc-opic",
+    name: "GPC OPIC",
+    code: "OPIC",
+    division: "Mainland Division",
+    venue: "Adonai Event Center",
+    address: "5 Channels TV Road, Isheri North, OPIC",
+    phone: "+234 903 007 3955",
+    phoneRaw: "+2349030073955",
+    googleMapsQuery: "https://maps.google.com/maps?q=Adonai+Event+Center+5+Channels+TV+Road+Isheri+North+OPIC"
+  },
+  {
+    id: "gpc-iju",
+    name: "GPC IJU",
+    code: "IJU",
+    division: "Mainland Division",
+    venue: "K and M",
+    address: "1 Dayo Kuye Close, Opposite Dele Adedugba Estates, Ifako Ijaiye",
+    phone: "07049378321",
+    phoneRaw: "+2347049378321",
+    googleMapsQuery: "https://maps.google.com/maps?q=1+Dayo+Kuye+Close+Ifako+Ijaiye+Lagos"
+  },
+  {
+    id: "gpc-ikorodu",
+    name: "GPC IKORODU",
+    code: "IKORODU",
+    division: "Mainland Division",
+    venue: "WHITEHALL EVENT CENTRE",
+    address: "94 Oba Sekumade Rd, Beside Ipakodo Grammar School, Ogolonto, Ikorodu",
+    phone: "0902 789 8589",
+    phoneRaw: "+2349027898589",
+    googleMapsQuery: "https://maps.google.com/maps?q=WHITEHALL+EVENT+CENTRE+94+Oba+Sekumade+Rd+Ogolonto+Ikorodu"
+  },
+  {
+    id: "gpc-okota",
+    name: "GPC OKOTA",
+    code: "OKOTA",
+    division: "Mainland Division",
+    venue: "GREENFIELD ESTATE COMPLEX",
+    address: "By FUUDIES Restaurant, Ago Palace Way, Okota",
+    phone: "+234 704 836 3160",
+    phoneRaw: "+2347048363160",
+    googleMapsQuery: "https://maps.google.com/maps?q=Greenfield+Estate+Complex+Ago+Palace+Way+Okota+Lagos"
+  },
+  {
+    id: "gpc-ikotun",
+    name: "GPC IKOTUN",
+    code: "IKOTUN",
+    division: "Mainland Division",
+    venue: "D Square Event Center",
+    address: "Ariket Plaza, Alake B/Stop, 235 Ikotun - Idimu Rd, Ikotun",
+    phone: "07071280012",
+    phoneRaw: "+2347071280012",
+    googleMapsQuery: "https://maps.google.com/maps?q=Ariket+Plaza+235+Ikotun+Idimu+Rd+Ikotun+Lagos"
+  },
+  {
+    id: "gpc-akute",
+    name: "GPC AKUTE",
+    code: "AKUTE",
+    division: "Mainland Division",
+    venue: "TEAMMATES EVENT PLACE",
+    address: "Opposite AP Filling Station, Akute Road",
+    phone: "+234 903 331 4286",
+    phoneRaw: "+2349033314286",
+    googleMapsQuery: "https://maps.google.com/maps?q=Teammates+Event+Place+Akute+Road+Lagos"
+  },
+  {
+    id: "gpc-alimosho",
+    name: "GPC ALIMOSHO",
+    code: "ALIMOSHO",
+    division: "Mainland Division",
+    venue: "MM Event Center",
+    address: "11/13 Adebayo Johnson Street, off Okeho Street, Pako Bus Stop, Dopemu, Lagos",
+    phone: "09131506158",
+    phoneRaw: "+2349131506158",
+    googleMapsQuery: "https://maps.google.com/maps?q=MM+Event+Center+11+Adebayo+Johnson+Street+Dopemu+Lagos"
+  }
+];

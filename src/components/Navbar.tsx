@@ -87,32 +87,29 @@ export default function Navbar({ onOpenVideo }: NavbarProps) {
                 {CHURCH_INFO.name}
               </span>
               <span className="text-[10px] sm:text-[11px] text-[#904d00] tracking-wider sm:tracking-widest font-bold uppercase">
-                {CHURCH_INFO.arkName} • Ikeja
+                Ikeja Branch
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center space-x-7 text-sm font-semibold">
-            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#schedule">
+            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="/#schedule">
               Services
             </a>
-            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#vision">
-              Vision &amp; Mandate
-            </a>
-            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#prophet">
+            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="/#prophet">
               The Prophet
             </a>
-            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#children">
+            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="/#children">
               Children &amp; Teens
             </a>
-            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#gallery">
-              Gallery
-            </a>
-            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#giving">
+            <Link className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="/divisional-branches">
+              Divisional Branches
+            </Link>
+            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="/#giving">
               Giving
             </a>
-            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="#contact">
+            <a className="text-[#45464e] hover:text-[#904d00] pb-1 transition-colors" href="/#contact">
               Contact &amp; Map
             </a>
           </nav>
@@ -180,49 +177,42 @@ export default function Navbar({ onOpenVideo }: NavbarProps) {
 
           <nav className="mt-8 flex flex-col space-y-5 font-semibold text-base">
             <a
-              href="#schedule"
+              href="/#schedule"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
             >
               Weekly Services
             </a>
             <a
-              href="#vision"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
-            >
-              Vision &amp; Mandate
-            </a>
-            <a
-              href="#prophet"
+              href="/#prophet"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
             >
               The Prophet
             </a>
             <a
-              href="#children"
+              href="/#children"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
             >
               Children &amp; Teens
             </a>
-            <a
-              href="#gallery"
+            <Link
+              href="/divisional-branches"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
             >
-              Gallery
-            </a>
+              Divisional Branches
+            </Link>
             <a
-              href="#giving"
+              href="/#giving"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
             >
               Giving &amp; Tithes
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-[#d3e4fe] hover:text-[#fbbf24] transition-colors"
             >
