@@ -28,7 +28,7 @@ export default function Footer() {
                 />
               </div>
               <span className="font-headline font-extrabold text-[#fbbf24] text-lg uppercase tracking-wider">
-                {CHURCH_INFO.name}
+                {CHURCH_INFO.fullName}
               </span>
             </div>
             <p className="text-xs text-[#f59e0b] uppercase tracking-wider font-bold">
@@ -51,7 +51,7 @@ export default function Footer() {
               }`}
           >
             <h4 className="font-headline text-sm font-bold text-[#faf9f6] uppercase tracking-wider">
-              Ikeja Branch
+              {CHURCH_INFO.fullName}
             </h4>
             <div className="flex items-start gap-2.5 text-xs text-[#d3e4fe]">
               <span className="material-symbols-outlined text-[#fbbf24] text-base mt-0.5">location_on</span>

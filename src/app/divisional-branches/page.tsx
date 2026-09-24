@@ -74,16 +74,10 @@ export default function DivisionalBranchesPage() {
             className={`max-w-3xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${isHeroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            {/* Division Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f59e0b]/15 border border-[#f59e0b]/30 text-[#fbbf24] text-xs font-bold uppercase tracking-wider mb-4">
-              <span className="text-sm">🚩</span>
-              <span>Mainland Division Chapters</span>
-            </div>
-
             <h1 className="font-headline text-3xl sm:text-5xl lg:text-6xl font-black text-[#faf9f6] tracking-tight leading-tight">
-              Mainland Divisional{" "}
+              Lagos Mainland {" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fbbf24] via-[#f59e0b] to-[#fe932c]">
-                Branches
+                Divisional Branches
               </span>
             </h1>
 

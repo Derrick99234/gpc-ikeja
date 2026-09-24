@@ -87,7 +87,7 @@ export default function Navbar({ onOpenVideo }: NavbarProps) {
                 {CHURCH_INFO.name}
               </span>
               <span className="text-[10px] sm:text-[11px] text-[#904d00] tracking-wider sm:tracking-widest font-bold uppercase">
-                Ikeja Branch
+                Ikeja
               </span>
             </div>
           </Link>
@@ -164,7 +164,7 @@ export default function Navbar({ onOpenVideo }: NavbarProps) {
           <div className="flex items-center justify-between pb-6 border-b border-white/10">
             <div className="flex items-center gap-3">
               <Image src="/images/gpc_logo.png" alt="Logo" width={32} height={32} className="object-contain" />
-              <span className="font-headline font-bold text-sm text-[#fbbf24]">Gospel Pillars Ikeja</span>
+              <span className="font-headline font-bold text-sm text-[#fbbf24]">{CHURCH_INFO.fullName}</span>
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(false)}

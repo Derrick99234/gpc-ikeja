@@ -32,7 +32,7 @@ export const CHURCH_INFO = {
   name: "Gospel Pillars Church",
   fullName: "Gospel Pillars Church Ikeja",
   shortName: "GPC Ikeja",
-  branch: "Ikeja Branch",
+  branch: "Ikeja",
   slogans: ["Where God is", "The Place of His Glory."],
   themeYear: "2026",
   themeTitle: "Glory, Overflow and Dominion",
